@@ -126,7 +126,7 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 40;
+	return 10;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 
@@ -173,6 +173,16 @@ function hackeryou_widgets_init() {
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => 'Projects Catagory Area',
+		'id' => 'projects-widget-area',
+		'description' => 'The blogpost widget area',
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 
 }

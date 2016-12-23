@@ -1,6 +1,7 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+    <h6>&copy; Basil Alzeri <?php echo date('Y'); ?></h6>
+    <h6>Website designed and developed by <a href="wwww.mohammadrezaei.com">Mohammad Rezaei</a></h6>
   </div>
 </footer>
 

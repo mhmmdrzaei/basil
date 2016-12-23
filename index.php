@@ -6,9 +6,11 @@
 
     <div class="content">
     		<?php get_template_part( 'loop', 'index' );	?>
+    		<?
+                      hackeryou_continue_reading_link()
+                       ?>
     </div> <!--/.content -->
 
-    <?php get_sidebar(); ?>
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->
