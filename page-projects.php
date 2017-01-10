@@ -3,6 +3,11 @@
 <div class="main">
   <div class="container">
     <div class="content">
+    <div class="sidebarblog">
+        <h3></h3>
+            <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
+        
+        </div>
         <?php $dreamBeanQuery = new WP_Query(array(
                 // 'post_per_page' => 1,// if you want all its -1
                 'post_type' => array( 'projects' ),
@@ -14,11 +19,7 @@
         <?php while($dreamBeanQuery->have_posts()): ?> 
         <?php $dreamBeanQuery->the_post(); ?>
         <?php $dreamBeanQuery->the_content(); ?> 
-        <div class="sidebarblog">
-        <h3></h3>
-            <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
         
-        </div>
 
           <div class="projectpost">
             <?php the_post_thumbnail( 'medium' ) ?>

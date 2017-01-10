@@ -25,6 +25,24 @@
       'container' => false,
       'theme_location' => 'primary'
     )); ?>
+    <div class="creditsHeader">
+      <?php $the_query = new WP_Query( 'page_id=13' ); ?>
+
+      <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
+        
+        <div class="toggle">
+          <?php the_post_thumbnail( 'medium' ) ?>        
+          <div class="toggle-content">
+            <?php the_content(); ?>
+              
+            </div>   
+
+          </div>
+
+
+
+        <?php endwhile;?>
+    </div>
   </div> <!-- /.container -->
 </header><!--/.header-->
 

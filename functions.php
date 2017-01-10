@@ -178,7 +178,7 @@ function hackeryou_widgets_init() {
 	register_sidebar( array(
 		'name' => 'Projects Catagory Area',
 		'id' => 'projects-widget-area',
-		'description' => 'The blogpost widget area',
+		'description' => 'The Projects widget area',
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h2 class="widget-title">',
@@ -286,3 +286,28 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+// taxonomy for tag cloud projects
+function wptp_register_taxonomy() {
+    register_taxonomy( 'animal_cat', 'projects',
+        array(
+            'labels' => array(
+                'name'              => 'Projects',
+                'singular_name'     => 'Project',
+                'search_items'      => 'Search Projects',
+                'all_items'         => 'All Projects',
+                'edit_item'         => 'Edit Projects',
+                'update_item'       => 'Update Projects',
+                'add_new_item'      => 'Add New Project',
+                'new_item_name'     => 'New Project Name',
+                'menu_name'         => 'Project',
+            ),
+            'hierarchical' => true,
+            'sort' => true,
+            'args' => array( 'orderby' => 'DSC', 'order' => 'DSC' ),
+            'rewrite' => array( 'slug' => 'taxonomy_year' ),
+            'show_admin_column' => true
+        )
+    );
+}
+add_action( 'init', 'wptp_register_taxonomy' );
