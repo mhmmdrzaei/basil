@@ -21,23 +21,30 @@
       </a>
     </h1>
 
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_location' => 'primary'
-    )); ?>
+     <div class="menuToggle" id="menuToggle">
+       Menu
+     </div>
+    <div class="menuContent away" >
+      <?php wp_nav_menu( array(
+        'container' => false,
+        'theme_location' => 'primary'
+      )); ?>
+        
+      </div>
     <div class="creditsHeader">
       <?php $the_query = new WP_Query( 'page_id=13' ); ?>
 
       <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
         
-        <div class="toggle">
-          <?php the_post_thumbnail( 'medium' ) ?>        
-          <div class="toggle-content">
+        <div class="creditsToggle">
+          <?php the_post_thumbnail( 'medium' ) ?>  
+        </div>      
+          <div class="creditsContent away">
             <?php the_content(); ?>
               
             </div>   
 
-          </div>
+          
 
 
 
