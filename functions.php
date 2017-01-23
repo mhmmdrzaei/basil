@@ -286,28 +286,18 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+//tag post
+function wpse28145_add_custom_types( $query ) {
+    if( is_tag() && $query->is_main_query() ) {
 
-// taxonomy for tag cloud projects
-function wptp_register_taxonomy() {
-    register_taxonomy( 'animal_cat', 'projects',
-        array(
-            'labels' => array(
-                'name'              => 'Projects',
-                'singular_name'     => 'Project',
-                'search_items'      => 'Search Projects',
-                'all_items'         => 'All Projects',
-                'edit_item'         => 'Edit Projects',
-                'update_item'       => 'Update Projects',
-                'add_new_item'      => 'Add New Project',
-                'new_item_name'     => 'New Project Name',
-                'menu_name'         => 'Project',
-            ),
-            'hierarchical' => true,
-            'sort' => true,
-            'args' => array( 'orderby' => 'DSC', 'order' => 'DSC' ),
-            'rewrite' => array( 'slug' => 'taxonomy_year' ),
-            'show_admin_column' => true
-        )
-    );
+        // this gets all post types:
+        $post_types = get_post_types();
+
+        // alternately, you can add just specific post types using this line instead of the above:
+        // $post_types = array( 'post', 'your_custom_type' );
+
+        $query->set( 'post_type', $post_types );
+    }
 }
-add_action( 'init', 'wptp_register_taxonomy' );
+add_filter( 'pre_get_posts', 'wpse28145_add_custom_types' );
+

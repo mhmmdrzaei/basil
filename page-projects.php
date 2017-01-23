@@ -4,7 +4,6 @@
   <div class="container">
     <div class="content">
     <div class="sidebarblog">
-        <h3></h3>
             <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
         
         </div>

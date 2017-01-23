@@ -5,6 +5,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php  wp_title('|', true, 'right'); ?></title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Overpass:300" rel="stylesheet">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <!-- stylesheets should be enqueued in functions.php -->
   <?php wp_head(); ?>
@@ -15,11 +16,11 @@
 
 <header>
   <div class="container">
-    <h1>
+    <h3 class="headerFont">
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
         <?php bloginfo( 'name' ); ?>
       </a>
-    </h1>
+    </h3>
 
      <div class="menuToggle" id="menuToggle">
        Menu

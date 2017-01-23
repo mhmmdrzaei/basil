@@ -8,10 +8,6 @@
 */
 
 @import 'normalize';
-@import 'typography';
-@import 'navigation';
-@import 'sidebar';
-@import 'comments';
 @import 'footer';
 /*
 ====================================
@@ -28,18 +24,162 @@ body {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1080px;
 	margin: 0 auto;
+	width: 98%;
 }
 
 .content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
+	width: 90%;
+	margin: 0 auto;
 }
 
 .full {
 	width: 100%;
+}
+///
+// fonts 
+
+$headfont: 'Montserrat', sans-serif;
+$bodyfont:'Overpass', sans-serif;
+
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+}
+// P's & H's
+
+h1{
+	@include fontSize(35);
+	font-family: $headfont;
+	color:black;
+
+}
+h2 {
+	@include fontSize(14);
+	font-family: $headfont;
+	color:black;
+	
+	}
+h3 {
+	@include fontSize(15);
+	font-family: $headfont;
+	color:black;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+}
+.headerFont {
+	    margin-top: 25px;
+}
+h4{
+	@include fontSize(10);
+	font-family: $headfont;
+	color:black;
+}
+
+a {
+	text-decoration: none;
+	color:black;
+	&:hover {
+		color: #grey;
+    	}
+}
+p {	
+	letter-spacing: 1px;
+	font-family: $bodyfont;
+	color:black;
+	@include fontSize(10);
+	a {
+		color:#87000F;
+		text-decoration: none;
+		&:hover {
+			color: #909090;
+		}
+	}
+
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	background: #fff url('images/bg.gif') top left no-repeat;
+	background-attachment:fixed;
+	color: #333;
+	font-family: $bodyfont;
+}
+
+//header 
+ul.menu {
+	display: flex;
+    list-style: none;
+    padding-left: 8%;
+    position: absolute;
+    top: 60px;
+
+	li {
+		display: inline;
+		margin-right: 10px;
+		a {
+				text-decoration: none;
+				&:hover {
+					text-decoration: line-through;
+			    	}
+		}
+	}
+}
+#menu-item-36{
+	    margin-left: 28%;
+}
+#menuToggle {
+	margin-top: 20px;
+ }
+.away {
+	display: none;
+}
+
+.creditsToggle{
+	position: relative;
+    top: 125px;
+    left: -24px;
+}
+.addition{
+	position: relative;
+	left: 66%;
+	top: 125px;
+}
+.creditsContent {
+	position: absolute;
+    top: 160px;
+    margin: 6px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 13px;
+    background: white;
+    width: 65%;
+    z-index: 10;
+}
+.strikeMenu {
+	text-decoration: line-through;
+}
+
+//front page
+
+.itemLinkeach {
+	a {
+		img{
+			max-width: 130px;	
+		}
+	}
+	
+	
 }
 
 

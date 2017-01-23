@@ -42,13 +42,8 @@ $(function(){
 	//credits toggle
 		$('.creditsToggle').on('click', function(event) {
 			event.preventDefault();
-			$('.creditsContent').removeClass('away');
-
-			$('h2.underlineYear').removeClass();
-
-			$('#hartist').addClass('strikeMenuArtist');
-
-			$('.yearArchiveToggle').addClass('awayAway');
+			$('.creditsContent').toggleClass('away');
+			$(this).toggleClass('addition');
 
 
 			
@@ -58,9 +53,8 @@ $(function(){
 	//Menu toggle
 		$('.menuToggle').on('click', function(event) {
 			event.preventDefault();
-			$('.menuContent').removeClass('away');
-
-			$('#menuToggle').addClass('strikeMenu');
+			$('.menuContent').toggleClass('away');
+			$('#menuToggle').toggleClass('strikeMenu');
 
 
 

@@ -4,9 +4,12 @@
   <div class="container">
 
     <div class="content">
-      <h1>Tag Archives: <?php single_tag_title(); ?></h1>
-      <?php get_template_part( 'page-projects', 'tag' ); ?>
- ?>
+    <div class="sidebarblog">
+            <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
+        </div>
+      <h4><?php single_tag_title(); ?></h4>
+      <?php get_template_part( 'loop', 'tag' ); ?>
+
     </div> <!-- /.content -->
 
   </div><!-- /.container -->
