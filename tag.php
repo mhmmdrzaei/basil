@@ -2,16 +2,33 @@
 
 <div class="main">
   <div class="container">
-
-    <div class="content">
-    <div class="sidebarblog">
-            <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
-        </div>
-      <h4><?php single_tag_title(); ?></h4>
-      <?php get_template_part( 'loop', 'tag' ); ?>
-
-    </div> <!-- /.content -->
-
+   <div class="cContainer"> <div class="creditsSide">
+   	   <div class="creditsHeader">
+   	        <?php $the_query = new WP_Query( 'page_id=13' ); ?>
+   	   
+   	        <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
+   	   
+   	    <div class="creditsToggle">
+   	    <?php the_post_thumbnail( 'medium' ) ?>  
+   	    </div>      
+   	    <div class="creditsContent away">
+   	      <?php the_content(); ?>
+   	        
+   	      </div>   
+   	   
+   	    <?php endwhile;?>
+   	   </div>
+   	</div>
+   	<div class="content tagBody">
+   	   	    <div class="sidebarblog">
+   	   	    <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
+   	   	    </div>
+   	  <div class="mainTag">
+   	  	<h4><?php single_tag_title(); ?></h4>
+   	  	<?php get_template_part( 'loop', 'tag' ); ?>
+   	  </div>
+   	
+   	</div> <!-- /.content --></div>
   </div><!-- /.container -->
 </div><!-- /.main -->
 

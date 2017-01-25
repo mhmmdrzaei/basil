@@ -24,7 +24,6 @@
           </div>
 
 			<footer>
-        <p><?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
 			</footer>
 
 		</article><!-- #post-## -->

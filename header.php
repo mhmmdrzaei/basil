@@ -32,25 +32,7 @@
       )); ?>
         
       </div>
-    <div class="creditsHeader">
-      <?php $the_query = new WP_Query( 'page_id=13' ); ?>
 
-      <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
-        
-        <div class="creditsToggle">
-          <?php the_post_thumbnail( 'medium' ) ?>  
-        </div>      
-          <div class="creditsContent away">
-            <?php the_content(); ?>
-              
-            </div>   
-
-          
-
-
-
-        <?php endwhile;?>
-    </div>
   </div> <!-- /.container -->
 </header><!--/.header-->
 

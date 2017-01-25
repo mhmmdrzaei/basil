@@ -301,3 +301,14 @@ function wpse28145_add_custom_types( $query ) {
 }
 add_filter( 'pre_get_posts', 'wpse28145_add_custom_types' );
 
+//tag cloud costumized 
+function custom_tag_cloud_widget($args) {
+	$args['number'] = 0; //adding a 0 will display all tags
+	$args['largest'] = 10; //largest tag
+	$args['smallest'] = 10; //smallest tag
+	$args['unit'] = 'px'; //tag font unit
+	$args['format'] = 'list'; //ul with a class of wp-tag-cloud
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'custom_tag_cloud_widget' );
+
