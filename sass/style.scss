@@ -41,6 +41,13 @@ body {
 .full {
 	width: 100%;
 }
+.main {
+	display: flex;
+    flex-wrap: wrap;
+}
+footer{
+	width: 100%;
+}
 ///
 // fonts 
 
@@ -98,12 +105,13 @@ p {
 	letter-spacing: 1px;
 	font-family: $bodyfont;
 	color:black;
-	@include fontSize(10);
+	@include fontSize(9);
 	a {
-		color:#87000F;
+		color:#grey;
 		text-decoration: none;
 		&:hover {
-			color: #909090;
+			color: #grey;
+			text-decoration: line-through;
 		}
 	}
 
@@ -121,6 +129,10 @@ body {
 }
 
 //header 
+header{
+	padding-left: 10%;
+	margin: 0 auto;
+}
 ul.menu {
 	display: flex;
     list-style: none;
@@ -192,10 +204,27 @@ ul.menu {
 
 //projects
 
-.sidebarProjects, .tagBody {
+.sidebarProjects, .tagBody, .mainTag, .contentSingleProject {
 	display: flex;
+	flex-wrap: wrap;
 }
-
+.widget-title {
+	display: none;
+}
+ul.wp-tag-cloud{
+	list-style: none;
+	padding: 0;
+}
+.tagBodyp{
+	display: block;
+	width: 100%;
+}
+.yearComplete {
+	width: 80%;
+}
+.sidebarblog{
+	width: 20%;
+}
 
 
 

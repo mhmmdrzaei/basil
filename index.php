@@ -23,6 +23,7 @@
   	
   	  <div class="content">
   	  		<?php get_template_part( 'loop', 'index' );	?>
+  	  		<?php the_date(); ?>
   	  		<?php the_content(); ?>
   	  		<?
   	                    hackeryou_continue_reading_link()
