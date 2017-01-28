@@ -20,29 +20,35 @@
        </div>
     </div>
     
-      <div class="content">
-         <?php $dreamBeanQuery = new WP_Query(array(
-                  // 'post_per_page' => 1,// if you want all its -1
-                  'post_type' => array( 'publications' ),
-                  'post_per_page' => array(-1)
-              )); ?> 
-    
-    
-          <?php if($dreamBeanQuery-> have_posts()):?>
-          <?php while($dreamBeanQuery->have_posts()): ?> 
-          <?php $dreamBeanQuery->the_post(); ?>
-          <?php $dreamBeanQuery->the_content(); ?> 
-    
-            <div class="publicationspost">
-              <?php the_post_thumbnail( 'medium' ) ?>
-              <p><a href="<?php the_permalink(); ?>">
-                        <?php the_title(); ?></a></p>
-            </div>
-    
-            <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?> 
-                      <!-- this will end the and reset and go back to normal so you can go back to normal to your page -->
-            <?php endif; ?>
+      <div class="content sidebarProjects">
+      <div class="sidebarblog">
+        <p>Publications</p>
+      </div>
+
+  <div class="projectsMain">
+    <?php $dreamBeanQuery = new WP_Query(array(
+             // 'post_per_page' => 1,// if you want all its -1
+             'post_type' => array( 'publications' ),
+             'post_per_page' => array(-1)
+         )); ?> 
+        
+        
+     <?php if($dreamBeanQuery-> have_posts()):?>
+     <?php while($dreamBeanQuery->have_posts()): ?> 
+     <?php $dreamBeanQuery->the_post(); ?>
+     <?php $dreamBeanQuery->the_content(); ?> 
+        
+       <div class="publicationspost">
+         <?php the_post_thumbnail( 'medium' ) ?>
+         <p><a href="<?php the_permalink(); ?>">
+                   <?php the_title(); ?></a></p>
+       </div>
+        
+       <?php endwhile; ?>
+       <?php wp_reset_postdata(); ?> 
+                 <!-- this will end the and reset and go back to normal so you can go back to normal to your page -->
+       <?php endif; ?>
+    </div>
       </div> <!-- /.content --></div>
 
 

@@ -24,7 +24,6 @@
    	   	    <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
    	   	    </div>
    	  <div class="mainTag">
-   	  	<p class="tagBodyp"><?php single_tag_title(); ?></p>
    	  	<?php get_template_part( 'loop', 'tag' ); ?>
    	  </div>
    	

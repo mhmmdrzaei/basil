@@ -36,6 +36,7 @@ body {
 .content {
 	width: 90%;
 	margin: 0 auto;
+	min-height: 550px;
 }
 
 .full {
@@ -71,7 +72,7 @@ h1{
 
 }
 h2 {
-	@include fontSize(14);
+	@include fontSize(12);
 	font-family: $headfont;
 	color:black;
 	
@@ -79,10 +80,13 @@ h2 {
 h3 {
 	@include fontSize(15);
 	font-family: $headfont;
-	color:black;
+	color:#636363;
 	margin: 0;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	a {
+		color:#636363;
+	}
 
 }
 .headerFont {
@@ -182,7 +186,7 @@ ul.menu {
     border: 3px solid black;
     border-radius: 10px;
     padding: 13px;
-    background: white;
+    background: rgba(255,255,255, 0.9);
     width: 65%;
     z-index: 10;
     max-width: 723px;
@@ -230,7 +234,7 @@ ul.wp-tag-cloud{
 	width: 80%;
 	margin-top: 25px;
 }
-.projectpost {
+.projectpost, .publicationspost {
 	width: 25%;
 	height: 25%;
 	
@@ -258,8 +262,53 @@ ul.wp-tag-cloud{
 	}
 }
 
+//bx slider
+.bx-wrapper .bx-viewport {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border:  none;
+	left: -40px;
+	background: none;
+	
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+}
+.bx-wrapper .bx-prev {
+	left: -20px;
+	z-index: 99;
+}
 
+.bx-wrapper .bx-next {
+	right: 20px;
+	z-index: 99;
+}
+ul.bxslider {
+		a {
+			z-index: 8;
+		}
+	li {
+		max-height: 500px;
+		img {
+			margin: 0 auto;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+//single project
+.contentWelcome{
+	left: -40px;
+}
 
+//active links
+.active{
+   text-decoration: line-through;
+}
 
 
 

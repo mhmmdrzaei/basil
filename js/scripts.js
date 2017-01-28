@@ -65,4 +65,19 @@ $(function(){
 
 	console.log("It's working");
 
+	//active Links 
+	jQuery(function($){
+    $('li a').filter(function(){
+       return $(this).attr('href').toLowerCase() === window.location.pathname.toLowerCase();
+    }).addClass('active');
+});
+
+    $("ul.wp-tag-cloud li a").each(function() {
+        if (this.href == window.location.href) {
+            $(this).addClass("active");
+        }
+    });
+
+
+
 });

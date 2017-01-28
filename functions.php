@@ -309,6 +309,13 @@ function custom_tag_cloud_widget($args) {
 	$args['unit'] = 'px'; //tag font unit
 	$args['format'] = 'list'; //ul with a class of wp-tag-cloud
 	return $args;
+	foreach ( $tags as $key => $tag ) {
+		/* ... */
+		$tag_active = (is_tag($tag->slug)) ? 'active ' : '';
+		$a[] = "<a href='$tag_link' class='" . $tag_active . "tag-link-$tag_id' title='" . esc_attr( $topic_count_text_callback( $real_count ) ) . "' style='color: #" . $tag_color . "; font-size: " .
+			( $smallest + ( ( $count - $min_count ) * $font_step ) )
+			. "$unit;'>$tag_name</a>";
+	}
 }
 add_filter( 'widget_tag_cloud_args', 'custom_tag_cloud_widget' );
 
