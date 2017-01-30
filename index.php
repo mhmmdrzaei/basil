@@ -21,13 +21,30 @@
   		   </div>
   		</div>
   	
-  	  <div class="content">
-  	  		<?php get_template_part( 'loop', 'index' );	?>
-  	  		<?php the_date(); ?>
-  	  		<?php the_content(); ?>
-  	  		<?
-  	                    hackeryou_continue_reading_link()
-  	                     ?>
+  	  <div class="content newsContentMain">
+      <?php while ( have_posts() ) : the_post(); ?>
+
+          <article class="newsBody" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <div class="newspost">
+                  <h4><a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?></a></h4>
+                                <div class="newsDate"><?php the_date(); ?></div>
+                                <?php the_content(); ?>
+                                <?
+                                              hackeryou_continue_reading_link()
+                                               ?>
+
+               
+
+         
+
+
+      </div>  
+      </article><!-- #post-## --> 
+      <?php endwhile; // End the loop. Whew. ?>
+  	  	<?php wp_reset_postdata(); ?> 
+  	   
+        
   	  </div> <!--/.content --></div>
 
   </div> <!-- /.container -->

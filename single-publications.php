@@ -2,7 +2,8 @@
 
 <div class="main">
   <div class="container">
-    <div class="cContainer"><div class="creditsHeader">
+    <div class="cContainer">
+    <div class="creditsHeader">
            <?php $the_query = new WP_Query( 'page_id=13' ); ?>
       
            <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
@@ -17,7 +18,6 @@
       
        <?php endwhile;?>
       </div>
-         </div>
         <div class="content">
       
       
@@ -36,7 +36,7 @@
             <?php wp_reset_postdata(); ?> 
                       <!-- this will end the and reset and go back to normal so you can go back to normal to your page -->
             <?php endif; ?>
-            <div class="yearComplete">
+            <div class="yearComplete publicationsMain">
                  <?php if( have_rows('images_publications') ) : ?>
                                       <ul class="bxslider">
                                           <?php while( have_rows('images_publications') ) : the_row(); ?>
@@ -62,11 +62,11 @@
       
                      <!-- credits -->
                     
-                     <div class="credits">
-                     <h2>Credits and Thank You's:</h2>
-                     <p><?php the_field('credits_and_thank_yous_publications'); ?></p>
-                
-                     </div>
+                   <div class="credits">
+                   <h2>Credits and Thank You's:</h2>
+                   <p><?php the_field('credits_and_thank_yous_publications'); ?></p>
+              
+                   </div>
                      
                      
                      
@@ -84,8 +84,9 @@
                 
                     <?php endif; ?>
                   
-                    </div>
+                  </div>
                     <?php endwhile;//end of Promo Material ?>
+            </div>
       
       
             

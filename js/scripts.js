@@ -1,11 +1,15 @@
 $(function(){
 
 	$('.bxslider').bxSlider({
-	  mode: 'fade',
-	  captions: true,
-	  auto: true
+	  	mode: 'fade',
+	  	captions: true,
+	  	auto: true,
+		adaptiveHeight: true,
+   		slideWidth: 700,
+   		
 	  
 	});
+
 	//dropdown menu 
 
 		$('.fuckyou').click(function(){
