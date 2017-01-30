@@ -12,6 +12,7 @@
     <?php the_post_thumbnail( 'medium' ) ?>  
     </div>      
     <div class="creditsContent away">
+    <span class="close thick"></span>
       <?php the_content(); ?>
         
       </div>   

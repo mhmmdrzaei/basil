@@ -22,16 +22,18 @@
       </a>
     </h3>
 
-     <div class="menuToggle" id="menuToggle">
-       Menu
+     <div class="Menuflex">
+       <div class="menuToggle" id="menuToggle">
+         Menu
+       </div>
+           <div class="menuContent away" >
+        <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_location' => 'primary'
+        )); ?>
+          
+        </div>
      </div>
-    <div class="menuContent away" >
-      <?php wp_nav_menu( array(
-        'container' => false,
-        'theme_location' => 'primary'
-      )); ?>
-        
-      </div>
 
   </div> <!-- /.container -->
 </header><!--/.header-->

@@ -25,7 +25,7 @@
   
       <h2><?php the_title(); ?></h2>
       <div class="emailcv">
-        <a href="<?php the_field('email_address') ?>"><?php the_field('email_address') ?></a>
+       <a href="mailto:<?php the_field('email_address') ?>"><?php the_field('email_address') ?></a>
       </div>
       <div class="socialmedia">
          <?php while( has_sub_fields('social_media') ): ?>
