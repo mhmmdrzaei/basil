@@ -115,7 +115,7 @@ p {
 		text-decoration: none;
 		&:hover {
 			color: #grey;
-			text-decoration: line-through;
+			text-decoration: underline;
 		}
 	}
 
@@ -170,6 +170,7 @@ ul.menu {
 	margin: 16px 0;
 
  }
+
  .menuContent {
  	width: 80%;
  }
@@ -179,7 +180,9 @@ ul.menu {
 .creditsSide{
 	width: 10%;
 }
+
 .creditsToggle{
+	cursor: pointer;
 	position: relative;
     top: 200px;
     left: -24px;
@@ -195,17 +198,20 @@ ul.menu {
 }
 .creditsContent {
 	position: absolute;
-    top: 280px;
+    top: 175px;
     margin: 6px;
     border: 3px solid black;
     border-radius: 10px;
     padding: 13px;
     background: rgba(255,255,255, 0.9);
     width: 65%;
-    z-index: 10;
-    max-width: 56%;
+    z-index: 199;
+    max-width: 60%;
     p {
     	margin-top: 0
+    }
+    span {
+    	cursor: pointer;
     }
 }
 .strikeMenu {
@@ -253,7 +259,7 @@ ul.wp-tag-cloud{
 	width: 80%;
 	margin-top: 25px;
 }
-.projectpost, .publicationspost {
+.projectpost, .publicationspost, .servicespost {
 	width: 25%;
 	height: 25%;
 	
@@ -299,12 +305,12 @@ ul.wp-tag-cloud{
 }
 .bx-wrapper .bx-prev {
 	left: -20px;
-	z-index: 99;
+	z-index: 99 !important;
 }
 
 .bx-wrapper .bx-next {
 	right: 20px;
-	z-index: 99;
+	z-index: 99 !important;
 }
 ul.bxslider {
 		a {
@@ -330,6 +336,9 @@ ul.bxslider {
 .active{
    text-decoration: line-through;
 }
+.activeMenu {
+	text-decoration: underline !important;
+}
 
 //publications stylings 
 .publicationsMain {
@@ -347,6 +356,10 @@ ul.bxslider {
 	@include fontSize(8);
 
 }
+
+h4.entry-title {
+		margin: 5px 0;
+	}
 .newspost{
 	h4{	
 		margin: 20px 0 0 0;
@@ -383,6 +396,9 @@ ul.bxslider {
 			color: grey;
 		}
 	}
+}
+.indexContent {
+	margin: 5%;
 }
 // cross stylings 
 

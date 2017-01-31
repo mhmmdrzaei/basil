@@ -4,26 +4,27 @@
   <div class="container">
 <div class="cContainer"><div class="creditsSide">
      <div class="creditsHeader">
-          <?php $the_query = new WP_Query( 'page_id=13' ); ?>
-     
-          <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
-     
-      <div class="creditsToggle">
-      <?php the_post_thumbnail( 'medium' ) ?>  
-      </div>      
-      <div class="creditsContent away">
-        <?php the_content(); ?>
-          
-        </div>   
-     
-      <?php endwhile;?>
-     </div>
+            <?php $the_query = new WP_Query( 'page_id=13' ); ?>
+       
+            <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
+       
+        <div class="creditsToggle">
+        <?php the_post_thumbnail( 'medium' ) ?>  
+        </div>      
+        <div class="creditsContent away">
+        <span class="close thick"></span>
+          <?php the_content(); ?>
+            
+          </div>   
+       
+        <?php endwhile;?>
+       </div>
   </div>
-  <div class="content">
+  <div class="content indexContent">
     <?php // Start the loop ?>
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
   
-      <h2><?php the_title(); ?></h2>
+
       <div class="emailcv">
        <a href="mailto:<?php the_field('email_address') ?>"><?php the_field('email_address') ?></a>
       </div>

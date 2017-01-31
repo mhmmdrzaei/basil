@@ -2,22 +2,28 @@
 
 <div class="main">
   <div class="container">
-<div class="cContainer"><div class="creditsHeader">
-       <?php $the_query = new WP_Query( 'page_id=13' ); ?>
-  
-       <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
-  
-   <div class="creditsToggle">
-   <?php the_post_thumbnail( 'medium' ) ?>  
-   </div>      
-   <div class="creditsContent away">
-     <?php the_content(); ?>
-       
-     </div>   
-  
-   <?php endwhile;?>
-  </div>
-    <div class="content">
+<div class="cContainer">
+  <div class="creditsHeader">
+         <?php $the_query = new WP_Query( 'page_id=13' ); ?>
+    
+         <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
+    
+     <div class="creditsToggle">
+     <?php the_post_thumbnail( 'medium' ) ?>  
+     </div>      
+     <div class="creditsContent away">
+     <span class="close thick"></span>
+       <?php the_content(); ?>
+         
+       </div>   
+    
+     <?php endwhile;?>
+    </div>
+    <div class="content sidebarProjects">
+    <div class="sidebarblog">
+        <p>Services</p>
+      </div>
+      <div class="projectsMain">
       <?php $dreamBeanQuery = new WP_Query(array(
                 // 'post_per_page' => 1,// if you want all its -1
                 'post_type' => array( 'services' ),
@@ -42,6 +48,7 @@
           <?php wp_reset_postdata(); ?> 
                     <!-- this will end the and reset and go back to normal so you can go back to normal to your page -->
           <?php endif; ?>
+          </div>
   </div>
   </div> <!-- /.container -->
 </div> <!-- /.main -->
