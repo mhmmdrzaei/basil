@@ -30,11 +30,14 @@
               
               <div class="itemLink">
                 <?php while( has_sub_fields('links_on_page_') ): ?>
-            <div class="itemLinkeach">
+            <div class="itemLinkeachFront">
                   <?php $image = get_sub_field('link_png_image');
                       if( !empty($image) ): ?>
                           <a href="<?php the_sub_field('link_frontpage'); ?>"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
-                          <p><?php the_sub_field('link_label_name'); ?></p>
+                          <div class="frontpagename"> 
+                              <?php the_sub_field('link_label_name'); ?>
+                          </div>
+                          
                      
         <?php endif; ?>
         </div>

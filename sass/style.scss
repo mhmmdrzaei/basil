@@ -187,8 +187,8 @@ ul.menu {
     top: 200px;
     left: -24px;
     img{
-    	width: 100%;
-    	height: 100%;
+    	width: 90%;
+    	height: 90%;
     }
 }
 .addition{
@@ -198,7 +198,7 @@ ul.menu {
 }
 .creditsContent {
 	position: absolute;
-    top: 175px;
+    top: 260px;
     margin: 6px;
     border: 3px solid black;
     border-radius: 10px;
@@ -206,7 +206,7 @@ ul.menu {
     background: rgba(255,255,255, 0.9);
     width: 65%;
     z-index: 199;
-    max-width: 60%;
+    max-width: 55%;
     p {
     	margin-top: 0
     }
@@ -400,6 +400,10 @@ h4.entry-title {
 .indexContent {
 	margin: 5%;
 }
+.cvpdf {
+	text-transform: uppercase;
+    font-weight: bold;
+}
 // cross stylings 
 
 .close{
@@ -440,5 +444,384 @@ h4.entry-title {
   }
 }
 
+//front page animation
+.itemLinkeachFront {
+	width: 8%;
+	img {
+		width: 100%;
+		height: 100%
+	}
+	// p {
+	// 	display: none;
+	// 	&:hover {
+	// 		display: block;
+	// 	}
+	// }
+}
+
+
+.itemLinkeachFront:nth-child(1) {
+    position: absolute;
+    top: 47%;
+    left: 37%;
+    // animation: trackAnimate linear 3s;
+    // animation-duration: 10s;
+    &:hover {
+    	animation:spin 4s linear infinite;
+    }
+}
+.itemLinkeachFront:nth-child(2) {
+    position: absolute;
+    top: 48%;
+    left: 38%;
+    animation: trackAnimateTwo 160s infinite;
+}
+.itemLinkeachFront:nth-child(3) {
+    position: absolute;
+    top: 39%;
+    left: 49%;
+    animation: trackAnimateThree 20s infinite;
+}
+
+.itemLinkeachFront:nth-child(4) {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    animation: trackAnimateFour 50s infinite;
+}
+.itemLinkeachFront:nth-child(5) {
+    position: absolute;
+    top: 51%;
+    left: 41%;
+    animation: trackAnimateFive 30s infinite;
+}
+.itemLinkeachFront:nth-child(6) {
+    position: absolute;
+    top: 42%;
+    left: 52%;
+    animation: trackAnimateSix 60s infinite;
+}
+
+.itemLinkeachFront:nth-child(7) {
+    position: absolute;
+    top: 53%;
+    left: 43%;
+    animation: trackAnimateSeven 40s infinite;
+}
+.itemLinkeachFront:nth-child(8) {
+    position: absolute;
+    top: 53%;
+    left: 43%;
+    animation: trackAnimateEight 50s infinite;
+}
+.itemLinkeachFront:nth-child(9) {
+    position: absolute;
+    top: 53%;
+    left: 43%;
+    animation: trackAnimateNine 40s infinite;
+}
+
+
+@keyframes trackAnimate {
+  0% {
+     transform: translate(-100%, -100%);
+  }
+  34% {
+     transform: translate(20%, 40%);
+  }
+  66% {
+     transform: translate(25%, 15%);
+  }
+  100% {
+     transform: translate(0%, 0%);
+  }
+  // 40% {
+  //    transform: translate(-100%, -100%);
+  // }
+  // 50% {
+  //    transform: translate(100%, 100%);
+  // }
+  // 60% {
+  //    transform: translate(100%, -100%);
+  // }
+  // 70% {
+  //    transform: translate(-100%, 100%);
+  // }
+  // 80% {
+  //    transform: translate(-100%, -100%);
+  // }
+  // 90% {
+  //    transform: translate(100%, -100%);
+  // }
+  // 100% {
+  //    transform: translate(100%, 100%);
+  // }
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+// @keyframes trackAnimateTwo {
+//   5% {
+//      transform: translate(-20%, -100%);
+//   }
+//   15% {
+//      transform: translate(100%, 20%);
+//   }
+//   30% {
+//      transform: translate(-30%, 100%);
+//   }
+//   45% {
+//      transform: translate(100%, -30%);
+//   }
+//   60% {
+//      transform: translate(-100%, -100%);
+//   }
+//   75% {
+//      transform: translate(10%, 100%);
+//   }
+//   90% {
+//      transform: translate(100%, -10%);
+//   }
+//   100% {
+//      transform: translate(-50%, 10%);
+// }
+// }
+// @keyframes trackAnimateThree {
+//   0% {
+//      transform: translate(-100%, -30%);
+//   }
+//   30% {
+//      transform: translate(80%, 50%);
+//   }
+//   60% {
+//      transform: translate(0%, 100%);
+//   }
+//   90% {
+//      transform: translate(100%, -10%);
+//   }
+//   100% {
+//      transform: translate(-80%, -30%);
+//   }
+//   // 50% {
+//   //    transform: translate(100%, 100%);
+//   // }
+//   // 60% {
+//   //    transform: translate(100%, -100%);
+//   // }
+//   // 70% {
+//   //    transform: translate(-100%, 100%);
+//   // }
+//   // 80% {
+//   //    transform: translate(-100%, -100%);
+//   // }
+//   // 90% {
+//   //    transform: translate(100%, -100%);
+//   // }
+//   // 100% {
+//   //    transform: translate(100%, 100%);
+//   // }
+// }
+// @keyframes trackAnimateFour {
+//   10% {
+//      transform: translate(9%, -10%);
+//   }
+//   15% {
+//      transform: translate(30%, 45%);
+//   }
+//   30% {
+//      transform: translate(-30%, 60%);
+//   }
+//   45% {
+//      transform: translate(-100%, 0%);
+//   }
+//   60% {
+//      transform: translate(30%, -30%);
+//   }
+//   75% {
+//      transform: translate(70%, 10%);
+//   }
+//   90% {
+//      transform: translate(32%, 66%);
+//   }
+//   100% {
+//      transform: translate(9%, -10%);
+// }
+// }
+// @keyframes trackAnimateFive {
+//   0% {
+//      transform: translate(100%, 100%);
+//   }
+//   10% {
+//      transform: translate(-100%, -100%);
+//   }
+//   20% {
+//      transform: translate(100%, -100%);
+//   }
+//   30% {
+//      transform: translate(-100%, 100%);
+//   }
+//   40% {
+//      transform: translate(100%, 100%);
+//   }
+//   50% {
+//      transform: translate(-100%, -100%);
+//   }
+//   60% {
+//      transform: translate(-100%, 100%);
+//   }
+//   70% {
+//      transform: translate(100%, -100%);
+//   }
+//   80% {
+//      transform: translate(100%, 100%);
+//   }
+//   90% {
+//      transform: translate(-100%, 100%);
+//   }
+//   100% {
+//      transform: translate(-100%, -100%);
+//   }
+// }
+// @keyframes trackAnimateSix {
+//   0% {
+//      transform: translate(50%, 50%);
+//   }
+//   10% {
+//      transform: translate(-100%, -100%);
+//   }
+//   20% {
+//      transform: translate(10%, -10%);
+//   }
+//   30% {
+//      transform: translate(0%, 60%);
+//   }
+//   40% {
+//      transform: translate(10%, 10%);
+//   }
+//   50% {
+//      transform: translate(-10%, -10%);
+//   }
+//   60% {
+//      transform: translate(-70%, 10%);
+//   }
+//   70% {
+//      transform: translate(0%, -10%);
+//   }
+//   80% {
+//      transform: translate(50%, 60%);
+//   }
+//   90% {
+//      transform: translate(-100%, 100%);
+//   }
+//   100% {
+//      transform: translate(-100%, -100%);
+//   }
+// }
+// @keyframes trackAnimateSeven {
+//   0% {
+//      transform: translate(0%, 30%);
+//   }
+//   10% {
+//      transform: translate(0%, 0%);
+//   }
+//   20% {
+//      transform: translate(100%, 30%);
+//   }
+//   30% {
+//      transform: translate(55%, 32%);
+//   }
+//   40% {
+//      transform: translate(-78%, -10%);
+//   }
+//   50% {
+//      transform: translate(100%, 70%);
+//   }
+//   60% {
+//      transform: translate(-70%, 10%);
+//   }
+//   70% {
+//      transform: translate(32%, -100%);
+//   }
+//   80% {
+//      transform: translate(-66%, 50%);
+//   }
+//   90% {
+//      transform: translate(0%, 12%);
+//   }
+//   100% {
+//      transform: translate(-40%, 0%);
+//   }
+// }
+
+// @keyframes trackAnimateEight {
+//   0% {
+//      transform: translate(0%, -30%);
+//   }
+//   10% {
+//      transform: translate(10%, -5%);
+//   }
+//   20% {
+//      transform: translate(-100%, -30%);
+//   }
+//   30% {
+//      transform: translate(-55%, -32%);
+//   }
+//   40% {
+//      transform: translate(78%, 10%);
+//   }
+//   50% {
+//      transform: translate(-100%, -70%);
+//   }
+//   60% {
+//      transform: translate(70%, -10%);
+//   }
+//   70% {
+//      transform: translate(-32%, 100%);
+//   }
+//   80% {
+//      transform: translate(66%, -50%);
+//   }
+//   90% {
+//      transform: translate(0%, -12%);
+//   }
+//   100% {
+//      transform: translate(40%, 0%);
+//   }
+// }
+
+// @keyframes trackAnimateNine {
+//   0% {
+//      transform: translate(3%,5%);
+//   }
+//   10% {
+//      transform: translate(100%, -5%);
+//   }
+//   20% {
+//      transform: translate(0%, 10%);
+//   }
+//   30% {
+//      transform: translate(-85%, 12%);
+//   }
+//   40% {
+//      transform: translate(-10%, 100%);
+//   }
+//   50% {
+//      transform: translate(0%, 70%);
+//   }
+//   60% {
+//      transform: translate(38%, 100%);
+//   }
+//   70% {
+//      transform: translate(32%, -58%);
+//   }
+//   80% {
+//      transform: translate(6%, -58%);
+//   }
+//   90% {
+//      transform: translate(-90%, 22%);
+//   }
+//   100% {
+//      transform: translate(4%, -100%);
+//   }
+// }
 
 

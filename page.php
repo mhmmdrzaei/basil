@@ -35,8 +35,6 @@
           
                 <?php endwhile;//end of Promo Material ?>
       </div>
-      <?php the_content(); ?>
-  
       <div class="cvpdf">
         <?php 
             
@@ -48,6 +46,9 @@
             
                 <?php endif; ?>
       </div>
+      <?php the_content(); ?>
+  
+      
   
     <?php endwhile; // end the loop?>
   </div> <!-- /,content -->

@@ -19,6 +19,7 @@
      
       <?php endwhile;?>
      </div>
+     </div>
       <div class="content">
   <div class="sidebarProjects">
   

@@ -85,6 +85,24 @@ $(function(){
         }
     });
 
-
+//animation 
+ $(".itemLinkeachFront:nth-child(1)").animate(
+        {top : "-=27%", left: "-=23%"}, 10000, function() {}
+    );
+  $(".itemLinkeachFront:nth-child(2)").animate(
+        {top : "-=30%", left: "+=35%"}, 10000, function() {}
+    );
+  $(".itemLinkeachFront:nth-child(3)").animate(
+        {top : "+=25%", left: "+=30%"}, 10000, function() {}
+    );
+   $(".itemLinkeachFront:nth-child(4)").animate(
+        {top : "+=25%", left: "-=30%"}, 10000, function() {}
+    );
+   $(".itemLinkeachFront:nth-child(5)").animate(
+        {top : "+=3%", left: "-=11%"}, 10000, function() {}
+    );
+   $(".itemLinkeachFront:nth-child(6)").animate(
+        {top : "+=5%", left: "+=5%"}, 10000, function() {}
+    );
 
 });
