@@ -2,7 +2,7 @@
 
 <div class="main">
   <div class="container">
-<div class="cContainer">
+<div class="cContainer frontMinHeight">
       <div class="creditsSide">
          <div class="creditsHeader">
                 <?php $the_query = new WP_Query( 'page_id=13' ); ?>
@@ -34,9 +34,9 @@
                   <?php $image = get_sub_field('link_png_image');
                       if( !empty($image) ): ?>
                           <a href="<?php the_sub_field('link_frontpage'); ?>"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
-                          <div class="frontpagename"> 
+                          <a href="<?php the_sub_field('link_frontpage'); ?>"><p class="frontpagename"> 
                               <?php the_sub_field('link_label_name'); ?>
-                          </div>
+                          </p></a>
                           
                      
         <?php endif; ?>

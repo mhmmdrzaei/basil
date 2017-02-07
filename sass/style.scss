@@ -49,6 +49,9 @@ body {
 footer{
 	width: 100%;
 }
+.frontMinHeight {
+	min-height: 600px;
+}
 ///
 // fonts 
 
@@ -198,7 +201,7 @@ ul.menu {
 }
 .creditsContent {
 	position: absolute;
-    top: 260px;
+    top: 200px;
     margin: 6px;
     border: 3px solid black;
     border-radius: 10px;
@@ -446,7 +449,7 @@ h4.entry-title {
 
 //front page animation
 .itemLinkeachFront {
-	width: 8%;
+	width: 10%;
 	img {
 		width: 100%;
 		height: 100%
@@ -458,6 +461,18 @@ h4.entry-title {
 	// 	}
 	// }
 }
+.frontpagename {
+	opacity: 0;
+	padding: 140px 0 0;
+    position: relative;
+    top: -140px;
+    cursor: pointer;
+    @include fontSize(8);
+
+	&:hover {
+		opacity: 1;
+	}
+}
 
 
 .itemLinkeachFront:nth-child(1) {
@@ -466,59 +481,126 @@ h4.entry-title {
     left: 37%;
     // animation: trackAnimate linear 3s;
     // animation-duration: 10s;
-    &:hover {
-    	animation:spin 4s linear infinite;
-    }
+    	img {
+    		animation:spin 4s linear infinite;
+    	}
 }
+@keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
 .itemLinkeachFront:nth-child(2) {
     position: absolute;
     top: 48%;
     left: 38%;
-    animation: trackAnimateTwo 160s infinite;
+    animation: twoShake .3s infinite;
+}
+@keyframes twoShake {
+     0% {transform: translateX(0px)}
+    33% {transform: translateX(5px) }
 }
 .itemLinkeachFront:nth-child(3) {
     position: absolute;
     top: 39%;
     left: 49%;
-    animation: trackAnimateThree 20s infinite;
+    animation: waveRight 3s ease-in-out infinite;
 }
-
+@keyframes waveRight {
+     0% {transform:rotate(0deg) translateX(0px)}
+    33% {transform:rotate(9deg) translateX(5px) }
+}
 .itemLinkeachFront:nth-child(4) {
     position: absolute;
     top: 40%;
     left: 50%;
-    animation: trackAnimateFour 50s infinite;
+   img {
+   	animation: rotateinspot 5s infinite;
+   }
+    
+   
+}
+@keyframes rotateinspot {
+   100% {transform:rotate(360deg)}
 }
 .itemLinkeachFront:nth-child(5) {
     position: absolute;
     top: 51%;
     left: 41%;
-    animation: trackAnimateFive 30s infinite;
+    animation: waveLeft 5s infinite;
 }
+@keyframes waveLeft {
+     0% {transform:rotate(0deg) translateX(0px)}
+    33% {transform:rotate(-5deg) translateX(-7px) }
+}
+
 .itemLinkeachFront:nth-child(6) {
     position: absolute;
     top: 42%;
     left: 52%;
-    animation: trackAnimateSix 60s infinite;
+    img {
+    	animation: skewSix 6s ease-in-out infinite;
+    }
+    
+}
+@keyframes skewSix {
+	0% {transform:skew(0deg,0deg)}
+	10% {transform:skew(10deg,10deg)}
+	30% {transform:skew(15deg,15deg)}
+	60% {transform:skew(10deg,10deg)}
+	100% {transform:skew(0deg,0deg)}
 }
 
 .itemLinkeachFront:nth-child(7) {
     position: absolute;
     top: 53%;
     left: 43%;
-    animation: trackAnimateSeven 40s infinite;
+    img {
+    	animation: sevenMatrix 7s  infinite;
+    }
+    
+}
+@keyframes sevenMatrix {
+	0% {
+		transform: matrix(0.866,0.5,-0.6,0.866,0,0)
+	}
+	30% {
+		transform: matrix(0.866,0.5,-0.7,0.866,0,0)
+	}
+	60% {
+		transform: matrix(0.866,0.5,-0.8,0.866,0,0)
+	}
+	100% {
+		transform: matrix(0.866,0.5,-0.6,0.866,0,0)
+	}
+	
 }
 .itemLinkeachFront:nth-child(8) {
     position: absolute;
     top: 53%;
     left: 43%;
-    animation: trackAnimateEight 50s infinite;
+ 
+    	img {
+    		animation:spin 100s linear infinite;
+    	}
 }
 .itemLinkeachFront:nth-child(9) {
     position: absolute;
     top: 53%;
     left: 43%;
-    animation: trackAnimateNine 40s infinite;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+    
+}
+@keyframes ninthThreeDee {
+	0% {
+		transform: scale3d(1,1,1)
+	}
+	50% {
+		transform: scale3d(.6,1.4,1.4)
+	}
+	100% {
+		transform: scale3d(1,1,1)
+	}
+
 }
 
 
@@ -535,293 +617,13 @@ h4.entry-title {
   100% {
      transform: translate(0%, 0%);
   }
-  // 40% {
-  //    transform: translate(-100%, -100%);
-  // }
-  // 50% {
-  //    transform: translate(100%, 100%);
-  // }
-  // 60% {
-  //    transform: translate(100%, -100%);
-  // }
-  // 70% {
-  //    transform: translate(-100%, 100%);
-  // }
-  // 80% {
-  //    transform: translate(-100%, -100%);
-  // }
-  // 90% {
-  //    transform: translate(100%, -100%);
-  // }
-  // 100% {
-  //    transform: translate(100%, 100%);
-  // }
+
+ }
+
+  footer {
+  	h6 {
+  		margin: 0;
+  	}
+ 	max-width: 1020px;
+    margin: 0 auto;
 }
-
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-// @keyframes trackAnimateTwo {
-//   5% {
-//      transform: translate(-20%, -100%);
-//   }
-//   15% {
-//      transform: translate(100%, 20%);
-//   }
-//   30% {
-//      transform: translate(-30%, 100%);
-//   }
-//   45% {
-//      transform: translate(100%, -30%);
-//   }
-//   60% {
-//      transform: translate(-100%, -100%);
-//   }
-//   75% {
-//      transform: translate(10%, 100%);
-//   }
-//   90% {
-//      transform: translate(100%, -10%);
-//   }
-//   100% {
-//      transform: translate(-50%, 10%);
-// }
-// }
-// @keyframes trackAnimateThree {
-//   0% {
-//      transform: translate(-100%, -30%);
-//   }
-//   30% {
-//      transform: translate(80%, 50%);
-//   }
-//   60% {
-//      transform: translate(0%, 100%);
-//   }
-//   90% {
-//      transform: translate(100%, -10%);
-//   }
-//   100% {
-//      transform: translate(-80%, -30%);
-//   }
-//   // 50% {
-//   //    transform: translate(100%, 100%);
-//   // }
-//   // 60% {
-//   //    transform: translate(100%, -100%);
-//   // }
-//   // 70% {
-//   //    transform: translate(-100%, 100%);
-//   // }
-//   // 80% {
-//   //    transform: translate(-100%, -100%);
-//   // }
-//   // 90% {
-//   //    transform: translate(100%, -100%);
-//   // }
-//   // 100% {
-//   //    transform: translate(100%, 100%);
-//   // }
-// }
-// @keyframes trackAnimateFour {
-//   10% {
-//      transform: translate(9%, -10%);
-//   }
-//   15% {
-//      transform: translate(30%, 45%);
-//   }
-//   30% {
-//      transform: translate(-30%, 60%);
-//   }
-//   45% {
-//      transform: translate(-100%, 0%);
-//   }
-//   60% {
-//      transform: translate(30%, -30%);
-//   }
-//   75% {
-//      transform: translate(70%, 10%);
-//   }
-//   90% {
-//      transform: translate(32%, 66%);
-//   }
-//   100% {
-//      transform: translate(9%, -10%);
-// }
-// }
-// @keyframes trackAnimateFive {
-//   0% {
-//      transform: translate(100%, 100%);
-//   }
-//   10% {
-//      transform: translate(-100%, -100%);
-//   }
-//   20% {
-//      transform: translate(100%, -100%);
-//   }
-//   30% {
-//      transform: translate(-100%, 100%);
-//   }
-//   40% {
-//      transform: translate(100%, 100%);
-//   }
-//   50% {
-//      transform: translate(-100%, -100%);
-//   }
-//   60% {
-//      transform: translate(-100%, 100%);
-//   }
-//   70% {
-//      transform: translate(100%, -100%);
-//   }
-//   80% {
-//      transform: translate(100%, 100%);
-//   }
-//   90% {
-//      transform: translate(-100%, 100%);
-//   }
-//   100% {
-//      transform: translate(-100%, -100%);
-//   }
-// }
-// @keyframes trackAnimateSix {
-//   0% {
-//      transform: translate(50%, 50%);
-//   }
-//   10% {
-//      transform: translate(-100%, -100%);
-//   }
-//   20% {
-//      transform: translate(10%, -10%);
-//   }
-//   30% {
-//      transform: translate(0%, 60%);
-//   }
-//   40% {
-//      transform: translate(10%, 10%);
-//   }
-//   50% {
-//      transform: translate(-10%, -10%);
-//   }
-//   60% {
-//      transform: translate(-70%, 10%);
-//   }
-//   70% {
-//      transform: translate(0%, -10%);
-//   }
-//   80% {
-//      transform: translate(50%, 60%);
-//   }
-//   90% {
-//      transform: translate(-100%, 100%);
-//   }
-//   100% {
-//      transform: translate(-100%, -100%);
-//   }
-// }
-// @keyframes trackAnimateSeven {
-//   0% {
-//      transform: translate(0%, 30%);
-//   }
-//   10% {
-//      transform: translate(0%, 0%);
-//   }
-//   20% {
-//      transform: translate(100%, 30%);
-//   }
-//   30% {
-//      transform: translate(55%, 32%);
-//   }
-//   40% {
-//      transform: translate(-78%, -10%);
-//   }
-//   50% {
-//      transform: translate(100%, 70%);
-//   }
-//   60% {
-//      transform: translate(-70%, 10%);
-//   }
-//   70% {
-//      transform: translate(32%, -100%);
-//   }
-//   80% {
-//      transform: translate(-66%, 50%);
-//   }
-//   90% {
-//      transform: translate(0%, 12%);
-//   }
-//   100% {
-//      transform: translate(-40%, 0%);
-//   }
-// }
-
-// @keyframes trackAnimateEight {
-//   0% {
-//      transform: translate(0%, -30%);
-//   }
-//   10% {
-//      transform: translate(10%, -5%);
-//   }
-//   20% {
-//      transform: translate(-100%, -30%);
-//   }
-//   30% {
-//      transform: translate(-55%, -32%);
-//   }
-//   40% {
-//      transform: translate(78%, 10%);
-//   }
-//   50% {
-//      transform: translate(-100%, -70%);
-//   }
-//   60% {
-//      transform: translate(70%, -10%);
-//   }
-//   70% {
-//      transform: translate(-32%, 100%);
-//   }
-//   80% {
-//      transform: translate(66%, -50%);
-//   }
-//   90% {
-//      transform: translate(0%, -12%);
-//   }
-//   100% {
-//      transform: translate(40%, 0%);
-//   }
-// }
-
-// @keyframes trackAnimateNine {
-//   0% {
-//      transform: translate(3%,5%);
-//   }
-//   10% {
-//      transform: translate(100%, -5%);
-//   }
-//   20% {
-//      transform: translate(0%, 10%);
-//   }
-//   30% {
-//      transform: translate(-85%, 12%);
-//   }
-//   40% {
-//      transform: translate(-10%, 100%);
-//   }
-//   50% {
-//      transform: translate(0%, 70%);
-//   }
-//   60% {
-//      transform: translate(38%, 100%);
-//   }
-//   70% {
-//      transform: translate(32%, -58%);
-//   }
-//   80% {
-//      transform: translate(6%, -58%);
-//   }
-//   90% {
-//      transform: translate(-90%, 22%);
-//   }
-//   100% {
-//      transform: translate(4%, -100%);
-//   }
-// }
-
-

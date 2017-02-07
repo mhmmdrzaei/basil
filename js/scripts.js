@@ -87,22 +87,34 @@ $(function(){
 
 //animation 
  $(".itemLinkeachFront:nth-child(1)").animate(
-        {top : "-=27%", left: "-=23%"}, 10000, function() {}
+        {top : "-=30%", left: "-=19%"}, 10000, function() {}
     );
   $(".itemLinkeachFront:nth-child(2)").animate(
-        {top : "-=30%", left: "+=35%"}, 10000, function() {}
+        {top : "-=35%", left: "+=27%"}, 10000, function() {}
     );
   $(".itemLinkeachFront:nth-child(3)").animate(
-        {top : "+=25%", left: "+=30%"}, 10000, function() {}
+        {top : "+=0%", left: "+=24%"}, 10000, function() {}
     );
    $(".itemLinkeachFront:nth-child(4)").animate(
-        {top : "+=25%", left: "-=30%"}, 10000, function() {}
+        {top : "+=16%", left: "-=26%"}, 10000, function() {}
     );
    $(".itemLinkeachFront:nth-child(5)").animate(
-        {top : "+=3%", left: "-=11%"}, 10000, function() {}
+        {top : "-=15%", left: "-=15%"}, 7000, function() {}
     );
    $(".itemLinkeachFront:nth-child(6)").animate(
-        {top : "+=5%", left: "+=5%"}, 10000, function() {}
+        {top : "-=7%", left: "+=3%"}, 5000, function() {}
+    );
+    $(".itemLinkeachFront:nth-child(7)").animate(
+        {top : "-=35%", left: "-=7%"}, 10000, function() {}
+    );
+    $(".itemLinkeachFront:nth-child(6)").animate(
+        {top : "+=3%", left: "+=1%"}, 5000, function() {}
+    );
+    $(".itemLinkeachFront:nth-child(8)").animate(
+        {top : "-=8%", left: "-=1%"}, 10000, function() {}
+    );
+        $(".itemLinkeachFront:nth-child(9)").animate(
+        {top : "+=16%", left: "-=1%"}, 10000, function() {}
     );
 
 });
