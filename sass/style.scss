@@ -183,6 +183,9 @@ ul.menu {
 .creditsSide{
 	width: 10%;
 }
+.showAtSize {
+	display: none;
+}
 
 .creditsToggle{
 	cursor: pointer;
@@ -627,4 +630,124 @@ h4.entry-title {
   	}
  	max-width: 1020px;
     margin: 0 auto;
+}
+//media Queries 
+
+@media(max-width: 967px){
+	#menu-item-36{
+	    margin-left: 16%;
+	}
+    
+}
+@media(max-width: 867px){
+	#menu-item-36{
+	    margin-left: 0%;
+	}
+    
+}
+@media(max-width: 750px){
+	.menuContent{
+		width: 100%;
+	}
+	.sidebarProjects{
+		display: block;
+	}
+    
+}
+@media(max-width: 650px){
+	.Menuflex {
+		position: fixed;
+		width: 100%;
+		z-index: 400;
+	}
+	.sidebarblog {
+		left: 0;
+		margin-top: 40px;
+		width: 100%;
+	}
+	.wp-tag-cloud{
+		display: flex;
+		flex-flow: row wrap;
+		li {
+			width: 50%;
+		}
+	}
+	.projectpost {
+		width: 50%;
+		height: 50%;
+		p {
+			 margin: 0 0 15px;
+		}
+	}
+	.creditsToggle {
+		top: 0;
+	}
+	.menuToggle {
+		position: relative;
+		z-index: 300;
+		top: -14px;
+		// left: 14px;
+	}
+	.menuContent{
+		position: absolute;
+		// left:14%;
+		top: 24px;
+		// opacity: .9;
+		background: white;
+		border: 2px solid black;
+		z-index: 299;
+		width: 85%;
+		border-radius: 13px;
+		ul.menu {
+			display: block;
+			li {
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+	.cContainer {
+		display: block;
+		.hideAtSize {
+			display: none;
+		}
+
+		.showAtSize {
+			display: block;
+			width: 17%;
+			top: 0;
+
+			.creditsToggle{
+				// top: 480px;
+				left: 230%;
+				img {
+					transform: rotate(90deg);
+					width: 100%;
+				}
+			}
+		}
+	}
+	.projectsMain {
+		width: 100%;
+	}
+	.creditsContent{
+			width: 85%;
+			top: 109px;
+			max-width: none;
+		}
+	footer{
+		width: 95%;
+		margin-bottom: 20px;
+	}
+    
+}
+@media(max-width: 420px){
+
+	.projectpost {
+		width: 100%;
+		height: 100%;
+		p {
+			 margin: 0 0 15px;
+		}
+	}
 }
