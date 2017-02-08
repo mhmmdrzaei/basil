@@ -130,7 +130,7 @@ p {
 
 body {
 	background: linear-gradient(to bottom, #ffffff 0%,#cccccc 100%);
-	// background: #fff url('images/bg.gif') top left no-repeat;
+	background-repeat: repeat;
 	background-attachment:fixed;
 	color: #333;
 	font-family: $bodyfont;
@@ -465,8 +465,9 @@ h4.entry-title {
 	opacity: 0;
 	padding: 140px 0 0;
     position: relative;
-    top: -140px;
+    top: -150px;
     cursor: pointer;
+    text-align: center;
     @include fontSize(8);
 
 	&:hover {

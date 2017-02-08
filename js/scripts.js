@@ -1,5 +1,29 @@
+var myImages = new Array("line1.png", "line2.png", "line3.png", "line4.png");
+var templateDirectory = "<?php bloginfo('template_directory'); ?>";
 $(function(){
+	//background images 
+        var random = myImages[Math.floor(Math.random() * myImages.length)];
+        random = 'url('+ templateDirectory +'/images/' + random + ')';
+        $('body').css('background-image', random);
 
+    //     setInterval(function() {
+    //         SetImage();
+    //     });
+
+    // function SetImage() {
+    //     var random = myImages[Math.floor(Math.random() * myImages.length)];
+
+    //     random = 'url(images/' + random + ')';
+    //     $('body').fadeOut(2000);
+
+    //     setTimeout(function () {
+    //         $('body').css('background-image', random);
+    //         $('body').fadeIn(2000);
+    //     }, 2000);
+    // }
+
+
+	//bxslider 
 	$('.bxslider').bxSlider({
 	  	mode: 'fade',
 	  	captions: true,
