@@ -25,7 +25,8 @@
   <div class="sidebarProjects">
   
     <div class="sidebarblog">
-          <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
+      <p class="ProjectsText">Projects</p>
+      <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
       
     </div>
  <div class="projectsMain"> 
@@ -61,13 +62,14 @@
           <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
      
       <div class="creditsToggle">
-      <?php the_post_thumbnail( 'medium' ) ?>  
-      </div>      
       <div class="creditsContent away">
       <span class="close thick"></span>
         <?php the_content(); ?>
           
-        </div>   
+        </div> 
+      <img src="<?php bloginfo('template_directory'); ?>/images/projectetchorizontal.png" alt=""> 
+      </div>      
+  
      
       <?php endwhile;?>
      </div>
