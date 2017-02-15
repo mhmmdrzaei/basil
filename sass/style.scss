@@ -9,6 +9,8 @@
 
 @import 'normalize';
 @import 'footer';
+@import 'hamburger';
+// @import 'navigation';
 /*
 ====================================
 Default Styling
@@ -31,7 +33,7 @@ body {
 }
 .cContainer{
  	display: flex;
- 	margin-top: 55px;
+ 	margin-top: 5px;
 }
 
 .content {
@@ -161,18 +163,26 @@ ul.menu {
 		}
 	}
 }
+//hamburger menu
+.fuckyou {
+	display: none;
+}
+.fa-bars{
+	display: none;
+}
+
 
 .Menuflex {
 	display: flex;
-	position: fixed;
+	// position: fixed;
 }
 #menu-item-36{
-	    margin-left: 28%;
+	    margin-left: 19%;
 }
 #menuToggle {
 	// margin-top: 20px;
 	cursor: pointer;
-	width: 13%;
+	width: 20%;
 	margin: 16px 0;
 	font-family: $headfont;
 
@@ -180,8 +190,8 @@ ul.menu {
 
  .menuContent {
  	width: 80%;
- 	position: relative;
- 	left: 35%
+ 	// position: relative;
+ 	// left: 35%
  }
 .away {
 	display: none;
@@ -672,12 +682,56 @@ h4.entry-title {
     
 }
 @media(max-width: 650px){
+			.fuckyou {
+			display: block;
+
+		}
+
+
+
+		.dropdown {
+				display: none;
+				position: fixed;
+				width: 100%;
+			    display: block;
+			    background: #f1f1f1;
+			    z-index: 99;
+			    margin: 10px 0;
+			    top: 0;
+			    padding: 60px 0;
+			    border: 5px solid #87000F;
+		    	// z-index: 101;
+		    	img {
+		    		display: none;
+		    		animation: none;
+		    	}
+		}
+		.fa-bars {
+		width: 60px;
+		cursor: pointer;
+		display: block;
+		height: 67px;
+		padding: 13px 10px;
+		position: fixed;
+		top: 10px;
+		z-index: 401;
+
+
+		}
+		.menuFlexOpen {
+			position: fixed;
+			padding-top: 62px;
+			top: 6px;
+			height: 370px;
+			width: 90%;
+			background: white;
+			border: 2px solid;
+		}
 	.sidebarProjects{
 		display: block;
 	}
 	.Menuflex {
 		position: fixed;
-		width: 100%;
 		z-index: 400;
 	}
 	.sidebarblog {
@@ -703,6 +757,7 @@ h4.entry-title {
 		top: 0;
 	}
 	.menuToggle {
+		display: none;
 		position: relative;
 		z-index: 300;
 		top: -14px;
@@ -711,12 +766,12 @@ h4.entry-title {
 		// left: 14px;
 	}
 	.menuContent{
+		margin: 0 7%;
 		position: absolute;
 		// left:14%;
-		top: 24px;
 		// opacity: .9;
-		background: white;
-		border: 2px solid black;
+		// background: white;
+		// border: 2px solid black;
 		z-index: 299;
 		width: 85%;
 		border-radius: 13px;

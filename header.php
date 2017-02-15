@@ -21,8 +21,18 @@
         <?php bloginfo( 'name' ); ?>
       </a>
     </h3>
+      <div class="fuckyou" id="">
+       <div class="fa fa-bars " title="menu">
+        <div id="nav-icon4">
+         <span></span>
+         <span></span>
+         <span></span>
+       </div>
+       </div>
 
-     <div class="Menuflex">
+       
+     </div> 
+     <div class="Menuflex" id="Menuflex">
        <div class="menuToggle" id="menuToggle">
          Menu
        </div>

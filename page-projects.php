@@ -61,13 +61,13 @@
      
           <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
      
-      <div class="creditsToggle">
+      <div class="creditsToggled">
       <div class="creditsContent away">
       <span class="close thick"></span>
         <?php the_content(); ?>
           
         </div> 
-      <img src="<?php bloginfo('template_directory'); ?>/images/projectetchorizontal.png" alt=""> 
+      <a href="<?php the_permalink(13); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/projectetchorizontal.png" alt=""> </a>
       </div>      
   
      

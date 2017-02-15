@@ -36,10 +36,11 @@ $(function(){
 
 	//dropdown menu 
 
-		$('.fuckyou').click(function(){
+		$('.fa-bars').click(function(){
 				$('#nav-icon4').toggleClass('open');
 
 					$(".headerMenu").toggleClass('dropdown');
+
 					// $('.borderWhite').toggle();
 					// $(".fa-bars").toggleClass('fa-borderss');
 					$(".headerMenu a").on("click", function(){
@@ -91,6 +92,17 @@ $(function(){
 			
 
 		});
+        $('.fuckyou').on('click', function(event) {
+            event.preventDefault();
+            $('.menuContent').toggleClass('away');
+            $('.Menuflex').toggleClass('menuFlexOpen');
+            // $('#menuToggle').toggleClass('strikeMenu');
+
+
+
+            
+
+        });
 
 
 	console.log("It's working");
