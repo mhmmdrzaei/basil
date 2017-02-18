@@ -21,6 +21,7 @@
    	</div>
    	<div class="content tagBody">
    	   	    <div class="sidebarblog">
+                <p class="ProjectsText">Projects</p>
    	   	    <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
    	   	    </div>
    	  <div class="mainTag">

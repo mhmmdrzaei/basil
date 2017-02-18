@@ -23,7 +23,7 @@
     
       <div class="content sidebarProjects">
       <div class="sidebarblog">
-        <p>Publications</p>
+        <p class="ProjectsText">Publications</p>
       </div>
 
   <div class="projectsMain">

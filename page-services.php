@@ -23,7 +23,7 @@
   </div>
     <div class="content sidebarProjects">
     <div class="sidebarblog">
-        <p>Services</p>
+        <p class="ProjectsText">Services</p>
       </div>
       <div class="projectsMain">
       <?php $dreamBeanQuery = new WP_Query(array(

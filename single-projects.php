@@ -23,7 +23,9 @@
       </div>
          </div>
      <div class="content contentSingleProject">
-      <div class="sidebarblog">
+      <div class="sidebarblog tagcloudss">
+      <p class="ProjectsText">Projects</p>
+
      <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
          
        </div>
