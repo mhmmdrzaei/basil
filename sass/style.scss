@@ -28,7 +28,7 @@ body {
 .container {
 	max-width: 1080px;
 	margin: 0 auto;
-	width: 90%;
+	
 
 }
 .cContainer{
@@ -657,6 +657,11 @@ h4.entry-title {
 
 
 //media Queries 
+@media(max-width: 1080px){
+	.container{
+		width: 90%;
+	}
+}
 
 @media(max-width: 967px){
 	.menuContent{
@@ -682,7 +687,7 @@ h4.entry-title {
 		display: none
 	}
 	.headerFont{
-		margin-top: 25px;
+		margin-top: 60px;
 	}
 		.menuContent{
 			left: 0;
