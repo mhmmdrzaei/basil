@@ -3,13 +3,13 @@
 <div class="main">
   <div class="container">
 <div class="cContainer frontMinHeight">
-      <div class="creditsSide hideAtSize">
+      <div class="creditsSide hideAtSize frontPageOnly">
          <div class="creditsHeader">
                 <?php $the_query = new WP_Query( 'page_id=13' ); ?>
            
                 <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
            
-            <div class="creditsToggle">
+            <div class="creditsToggle frontPageToggle">
             <?php the_post_thumbnail( 'medium' ) ?>  
             </div>      
             <div class="creditsContent away">

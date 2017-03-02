@@ -144,7 +144,7 @@ body {
 
 //header 
 header{
-	max-width: 1020px;
+	max-width: 1060px;
 	margin: 0 auto;
 }
 ul.menu {
@@ -156,7 +156,7 @@ ul.menu {
 
 	li {
 		display: inline;
-		margin-right: 10px;
+		margin-right: 15px;
 		a {
 				text-decoration: none;
 				&:hover {
@@ -191,28 +191,35 @@ ul.menu {
  }
 
  .menuContent {
- 	width: 80%;
+ 	width: 82%;
  	// position: relative;
  	// left: 35%
  }
 .away {
 	display: none;
 }
-.creditsSide{
-	width: 10%;
-}
+
 .showAtSize {
 	display: none;
 }
-
-.creditsToggle{
+.creditsToggle {
+	position: relative;
+    top: 200px;
+    img {
+    	    width: 75px;
+    	    height: 155%;
+    	
+    }
+}
+.frontPageToggle{
 	cursor: pointer;
 	position: relative;
     top: 200px;
-    left: -24px;
+    left: -464px;
     img{
-    	width: 90%;
-    	height: 90%;
+    	width: 151px;
+    	
+    	height: 125%;
     }
 }
 .addition{
@@ -223,6 +230,7 @@ ul.menu {
 .creditsContent {
 	position: absolute;
     top: 200px;
+    left: 42px;
     margin: 6px;
     border: 3px solid black;
     border-radius: 10px;
@@ -654,12 +662,28 @@ h4.entry-title {
  	max-width: 1020px;
     margin: 0 auto 20px;
 }
-
+.frontPageOnly {
+	width: 100%;
+}
 
 //media Queries 
 @media(max-width: 1080px){
+	.creditsToggle {
+		width: 130%; 
+		left: -24px;
+		img{
+			width: 74px;
+			height: 90%;
+		}
+	}
+	.creditsSide{
+	width: 10%;
+}
 	.container{
 		width: 90%;
+	}
+		#menu-item-36{
+	    margin-left: 16%;
 	}
 }
 
@@ -668,7 +692,7 @@ h4.entry-title {
 		left: 25%;
 	}
 	#menu-item-36{
-	    margin-left: 16%;
+	    margin-left: 5%;
 	}
     
 }
@@ -738,7 +762,7 @@ h4.entry-title {
 			top: 6px;
 			left: 4%;
 			height: 370px;
-			width: 87%;
+			width: 92%;
 			background: white;
 			border: 2px solid;
 		}
@@ -783,6 +807,7 @@ h4.entry-title {
 		}
 	}
 	.creditsToggle {
+		width: 130%;
 		top: 0;
 	}
 	.menuToggle {
