@@ -149,8 +149,10 @@ body {
 
 //header 
 header{
-	max-width: 1060px;
+	// max-width: 1060px;
 	margin: 0 auto;
+	width: 95%;
+
 }
 ul.menu {
 	display: flex;
@@ -189,14 +191,14 @@ ul.menu {
 #menuToggle {
 	// margin-top: 20px;
 	cursor: pointer;
-	width: 3%;
+	width: 20%;
 	margin: 20px 0;
 	font-family: $headfont;
 
  }
 
  .menuContent {
- 	width: 82%;
+ 	padding: 0 8%;
  	// position: relative;
  	// left: 35%
  }
@@ -209,7 +211,7 @@ ul.menu {
 }
 .creditsToggle {
 	position: absolute;
-    top: 30%;
+    top: 35%;
     cursor: pointer;
     img {
     	    width: 75px;
@@ -341,12 +343,18 @@ ul.wp-tag-cloud{
 	background: none;
 	position: static !important;
 	
+
+	
 	/*fix other elements on the page moving (on Chrome)*/
 	-webkit-transform: translatez(0);
 	-moz-transform: translatez(0);
     	-ms-transform: translatez(0);
     	-o-transform: translatez(0);
     	transform: translatez(0);
+}
+.bx-wrapper {
+	max-width: 100% !important;
+
 }
 .bx-wrapper .bx-prev {
 	left: -20px;
@@ -362,6 +370,7 @@ ul.bxslider {
 			z-index: 8;
 		}
 	li {
+		width: 100% !important;
 		img {
 			margin: 0 auto;
 			height: 100%;
@@ -675,10 +684,10 @@ h4.entry-title {
 
 //media Queries 
 @media(max-width: 1170px){
-	.headerContent{
-	width: 95%;
-	margin: 0 auto;
-}
+// 	.headerContent{
+// 	width: 95%;
+// 	margin: 0 auto;
+// }
 }
 @media(max-width: 1080px){
 	// .creditsToggle {
@@ -729,6 +738,7 @@ h4.entry-title {
 		.menuContent{
 			left: 0;
 			width: 100%;
+			text-align: center;
 		}
 		.yearComplete {
 		width: 95%;
@@ -888,6 +898,9 @@ h4.entry-title {
     
 }
 @media(max-width: 500px){
+	.content {
+		margin-top: 50px;
+	}
 	.sidebarProjects, .tagBody, .mainTag, .contentSingleProject, .projectsMain{
 		display: block;
 	}

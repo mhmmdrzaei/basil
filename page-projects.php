@@ -15,7 +15,7 @@
           <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
      
       <div class="creditsToggle hideAtSize">
-      <?php the_post_thumbnail( 'medium' ) ?>  
+      <?php the_post_thumbnail( 'full' ) ?>  
       </div>      
       <div class="creditsContent away">
       <span class="close thick"></span>
