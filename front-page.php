@@ -9,7 +9,7 @@
            
                 <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
            
-            <div class="creditsToggle frontPageToggle">
+            <div class="creditsToggle frontPageToggle hideAtSize">
             <?php the_post_thumbnail( 'medium' ) ?>  
             </div>      
             <div class="creditsContent away">

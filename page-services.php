@@ -3,13 +3,14 @@
 <div class="main">
   <div class="container">
 <div class="cContainer">
-<div class="creditsSide hideAtSize">
-   <div class="creditsHeader">
-          <?php $the_query = new WP_Query( 'page_id=13' ); ?>
+    <div class="content sidebarProjects">
+    <div class="sidebarblog">
+        <p class="ProjectsText">Services</p>
+        <?php $the_query = new WP_Query( 'page_id=13' ); ?>
      
           <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
      
-      <div class="creditsToggle">
+      <div class="creditsToggle hideAtSize">
       <?php the_post_thumbnail( 'medium' ) ?>  
       </div>      
       <div class="creditsContent away">
@@ -19,11 +20,6 @@
         </div>   
      
       <?php endwhile;?>
-     </div>
-  </div>
-    <div class="content sidebarProjects">
-    <div class="sidebarblog">
-        <p class="ProjectsText">Services</p>
       </div>
       <div class="projectsMain">
       <?php $dreamBeanQuery = new WP_Query(array(

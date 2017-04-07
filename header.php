@@ -21,34 +21,36 @@
 
 <header>
   <div class="container">
-    <h3 class="headerFont">
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h3>
-      <div class="fuckyou" id="">
-       <div class="fa fa-bars " title="menu">
-        <div id="nav-icon4">
-         <span></span>
-         <span></span>
-         <span></span>
-       </div>
-       </div>
-
-       
-     </div> 
-     <div class="Menuflex" id="Menuflex">
-       <div class="menuToggle" id="menuToggle">
-         Menu
-       </div>
-           <div class="menuContent away" >
-        <?php wp_nav_menu( array(
-          'container' => false,
-          'theme_location' => 'primary'
-        )); ?>
-          
-        </div>
+<div class="headerContent">
+  <h3 class="headerFont">
+    <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+      <?php bloginfo( 'name' ); ?>
+    </a>
+  </h3>
+    <div class="fuckyou" id="">
+     <div class="fa fa-bars " title="menu">
+      <div id="nav-icon4">
+       <span></span>
+       <span></span>
+       <span></span>
      </div>
+     </div>
+  
+     
+   </div> 
+   <div class="Menuflex" id="Menuflex">
+     <div class="menuToggle" id="menuToggle">
+       Menu
+     </div>
+         <div class="menuContent away" >
+      <?php wp_nav_menu( array(
+        'container' => false,
+        'theme_location' => 'primary'
+      )); ?>
+        
+      </div>
+   </div>
+</div>
 
   </div> <!-- /.container -->
 </header><!--/.header-->

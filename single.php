@@ -3,7 +3,7 @@
 <div class="main">
   <div class="container">
   <div class="cContainer">
-  <div class="creditsHeader hideAtSize">
+<!--   <div class="creditsHeader hideAtSize">
          <?php $the_query = new WP_Query( 'page_id=13' ); ?>
     
          <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
@@ -18,7 +18,7 @@
        </div>   
     
      <?php endwhile;?>
-    </div>
+    </div> -->
     <div class="content">
       <div class="newsContentMain">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -51,7 +51,7 @@
       </div>
 
     </div> <!-- /.content -->
-          <div class="creditsSide showAtSize">
+<!--           <div class="creditsSide showAtSize">
        <div class="creditsHeader">
               <?php $the_query = new WP_Query( 'page_id=13' ); ?>
          
@@ -69,7 +69,7 @@
          
           <?php endwhile;?>
          </div>
-      </div>
+      </div> -->
   </div>
   </div> <!-- /.container -->
 </div> <!-- /.main -->

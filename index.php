@@ -3,7 +3,7 @@
 
 <div class="main">
   <div class="container"><div class="cContainer">
-<div class="creditsSide hideAtSize">
+<!-- <div class="creditsSide hideAtSize">
    <div class="creditsHeader">
           <?php $the_query = new WP_Query( 'page_id=13' ); ?>
      
@@ -20,7 +20,7 @@
      
       <?php endwhile;?>
      </div>
-  </div>
+  </div> -->
   	  <div class="content newsContentMain">
       <?php while ( have_posts() ) : the_post(); ?>
 
@@ -46,7 +46,7 @@
   	   
         
   	  </div> <!--/.content -->
-            <div class="creditsSide showAtSize">
+ <!--            <div class="creditsSide showAtSize">
          <div class="creditsHeader">
                 <?php $the_query = new WP_Query( 'page_id=13' ); ?>
            
@@ -59,7 +59,7 @@
                 
               </div> 
             <a href="<?php the_permalink(13); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/projectetchorizontal.png" alt=""> </a>
-            </div>      
+            </div>       -->
         
            
             <?php endwhile;?>

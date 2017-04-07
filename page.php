@@ -2,8 +2,8 @@
 
 <div class="main">
   <div class="container">
-<div class="cContainer"><div class="creditsSide hideAtSize">
-     <div class="creditsHeader">
+<div class="cContainer"><!-- <div class="creditsSide hideAtSize">
+     <div class="sidebarblog">
             <?php $the_query = new WP_Query( 'page_id=13' ); ?>
        
             <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
@@ -19,7 +19,7 @@
        
         <?php endwhile;?>
        </div>
-  </div>
+  </div> -->
   <div class="content indexContent">
     <?php // Start the loop ?>
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -52,7 +52,7 @@
   
     <?php endwhile; // end the loop?>
   </div> <!-- /,content -->
-      <div class="creditsSide showAtSize">
+  <!--     <div class="creditsSide showAtSize">
    <div class="creditsHeader">
           <?php $the_query = new WP_Query( 'page_id=13' ); ?>
      
@@ -70,7 +70,7 @@
      
       <?php endwhile;?>
      </div>
-  </div>
+  </div> -->
   </div>
   </div> <!-- /.container -->
 </div> <!-- /.main -->
