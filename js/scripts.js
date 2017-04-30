@@ -104,22 +104,22 @@ $(function(){
         {top : "-=28%", left: "-=19%"}, 10000, function() {}
     );
   $(".itemLinkeachFront:nth-child(2)").animate(
-        {top : "-=30%", left: "+=27%"}, 10000, function() {}
+        {top : "-=30%", left: "+=33%"}, 10000, function() {}
     );
   $(".itemLinkeachFront:nth-child(3)").animate(
-        {top : "+=3%", left: "+=24%"}, 10000, function() {}
+        {top : "-=3%", left: "+=26%"}, 10000, function() {}
     );
    $(".itemLinkeachFront:nth-child(4)").animate(
-        {top : "+=18%", left: "-=26%"}, 10000, function() {}
+        {top : "+=25%", left: "-=29%"}, 10000, function() {}
     );
    $(".itemLinkeachFront:nth-child(5)").animate(
-        {top : "-=15%", left: "-=15%"}, 7000, function() {}
+        {top : "-=15%", left: "-=19%"}, 7000, function() {}
     );
    $(".itemLinkeachFront:nth-child(6)").animate(
-        {top : "-=7%", left: "+=3%"}, 5000, function() {}
+        {top : "-=7%", left: "+=7%"}, 5000, function() {}
     );
     $(".itemLinkeachFront:nth-child(7)").animate(
-        {top : "-=33%", left: "-=7%"}, 10000, function() {}
+        {top : "-=29%", left: "+=8%"}, 10000, function() {}
     );
     $(".itemLinkeachFront:nth-child(6)").animate(
         {top : "+=5%", left: "+=1%"}, 5000, function() {}
@@ -129,6 +129,15 @@ $(function(){
     );
         $(".itemLinkeachFront:nth-child(9)").animate(
         {top : "+=18%", left: "-=1%"}, 10000, function() {}
+    );
+    $(".itemLinkeachFront:nth-child(10)").animate(
+        {top : "+=2%", left: "+=18%"}, 10000, function() {}
+    );
+    $(".itemLinkeachFront:nth-child(11)").animate(
+        {top : "+=25%", left: "+=30%"}, 10000, function() {}
+    );
+    $(".itemLinkeachFront:nth-child(12)").animate(
+        {top : "-=28%", left: "-=10%"}, 10000, function() {}
     );
 
 
