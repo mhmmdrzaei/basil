@@ -43,8 +43,8 @@
      
          <div class="projectpost">
            <?php the_post_thumbnail( 'medium' ) ?>
-           <p><a href="<?php the_permalink(); ?>">
-                     <?php the_title(); ?></a></p>
+           <div class="paragraph"><a href="<?php the_permalink(); ?>">
+                     <?php the_title(); ?></a></div>
          </div>
      
          <?php endwhile; ?>

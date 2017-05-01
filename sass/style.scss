@@ -23,6 +23,8 @@ img {
 
 body {
 	color: #333;
+	// cursor: pointer;
+	cursor: url('images/hand.png'), auto;
 }
 
 
@@ -145,6 +147,10 @@ body {
 	background-attachment:fixed;
 	color: #333;
 	font-family: $bodyfont;
+	cursor: url('images/hand.png'), auto;
+	p, a {
+		cursor: url('images/hand.png'), auto;
+	}
 }
 
 //header 
@@ -190,7 +196,7 @@ ul.menu {
 }
 #menuToggle {
 	// margin-top: 20px;
-	cursor: pointer;
+	// cursor: pointer;
 	width: 20%;
 	margin: 20px 0;
 	font-family: $headfont;
@@ -212,7 +218,7 @@ ul.menu {
 .creditsToggle {
 	position: absolute;
     top: 35%;
-    cursor: pointer;
+    // cursor: pointer;
     img {
     	    width: 75px;
     	    height: 155%;
@@ -220,7 +226,7 @@ ul.menu {
     }
 }
 .frontPageToggle{
-	cursor: pointer;
+	// cursor: pointer;
 	// position: relative;
     // top: 200px;
     // left: -464px;
@@ -251,7 +257,7 @@ ul.menu {
     	margin-top: 0
     }
     span {
-    	cursor: pointer;
+    	// cursor: pointer;
     }
 }
 .strikeMenu {
@@ -306,16 +312,23 @@ ul.wp-tag-cloud{
 	
 }
 .projectpost, .publicationspost, .servicespost {
-	width: 30%;
-	height: 30%;
-	
+	// width: 30%;
+	// height: 30%;
+	padding: 10px;
 	img {
-		width: 93%;
+		// max-height: 200px;
+		// max-width: 400px;
+		// width: 93%;
+		// height: 93%;
 		height: auto;
+		width:auto;
+		max-height:200px;
 	}
-	p {
+	.paragraph {
+		width: 85%;
 		margin: 0px 0 50px 0;
 		font-weight: bold;
+		// text-align: right;
 		@include fontSize(8);
 
 	}
@@ -515,7 +528,7 @@ h4.entry-title {
 	padding: 140px 0 0;
     position: relative;
     top: -150px;
-    cursor: pointer;
+    // cursor: pointer;
     text-align: center;
     @include fontSize(8);
 
@@ -796,7 +809,7 @@ h4.entry-title {
 		}
 		.fa-bars {
 		width: 60px;
-		cursor: pointer;
+		// cursor: pointer;
 		display: block;
 		height: 67px;
 		padding: 13px 10px;
