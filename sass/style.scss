@@ -148,9 +148,9 @@ body {
 	color: #333;
 	font-family: $bodyfont;
 	cursor: url('images/hand.png'), auto;
-	p, a {
-		cursor: url('images/hand.png'), auto;
-	}
+	// p, a {
+	// 	cursor: url('images/hand.png'), auto;
+	// }
 }
 
 //header 
@@ -197,6 +197,7 @@ ul.menu {
 #menuToggle {
 	// margin-top: 20px;
 	// cursor: pointer;
+	cursor: url('images/hand.png'), auto;
 	width: 20%;
 	margin: 20px 0;
 	font-family: $headfont;
@@ -219,6 +220,7 @@ ul.menu {
 	position: absolute;
     top: 35%;
     // cursor: pointer;
+    cursor: url('images/hand.png'), auto;
     img {
     	    width: 75px;
     	    height: 155%;
@@ -258,6 +260,7 @@ ul.menu {
     }
     span {
     	// cursor: pointer;
+    	cursor: url('images/hand.png'), auto;
     }
 }
 .strikeMenu {
@@ -529,6 +532,7 @@ h4.entry-title {
     position: relative;
     top: -150px;
     // cursor: pointer;
+    cursor: url('images/hand.png'), auto;
     text-align: center;
     @include fontSize(8);
 
@@ -810,6 +814,7 @@ h4.entry-title {
 		.fa-bars {
 		width: 60px;
 		// cursor: pointer;
+		cursor: url('images/hand.png'), auto;
 		display: block;
 		height: 67px;
 		padding: 13px 10px;
