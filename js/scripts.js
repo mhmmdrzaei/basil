@@ -131,7 +131,7 @@ $(function(){
         {top : "+=18%", left: "-=1%"}, 10000, function() {}
     );
     $(".itemLinkeachFront:nth-child(10)").animate(
-        {top : "+=2%", left: "+=18%"}, 10000, function() {}
+        {top : "+=2%", left: "+=200%"}, 10000, function() {}
     );
     $(".itemLinkeachFront:nth-child(11)").animate(
         {top : "+=25%", left: "+=30%"}, 10000, function() {}
@@ -139,7 +139,17 @@ $(function(){
     $(".itemLinkeachFront:nth-child(12)").animate(
         {top : "-=28%", left: "-=10%"}, 10000, function() {}
     );
+    $(".itemLinkeachFront:nth-child(13)").animate(
+        {top : "+=2%", left: "+=38%"}, 10000, function() {}
+    );
 
 
 });
 
+//mouse mover
+$(document).mousemove(function(e) {
+  $('#space-invader').animate({
+    left: e.pageX,
+    top: e.pageY
+  }).clearQueue();  
+});

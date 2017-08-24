@@ -10,12 +10,12 @@
   <!-- stylesheets should be enqueued in functions.php -->
   <?php wp_head(); ?>
 </head>
-<?php
-  $bg = array('line1.png', 'line2.png', 'line3.png', 'line4.png' ); // array of filenames
+<!-- <?php
+  //$bg = array('line1.png', 'line2.png', 'line3.png', 'line4.png' ); // array of filenames
 
-  $i = rand(0, count($bg)-1); // generate random number size of the array
-  $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-?>
+  //$i = rand(0, count($bg)-1); // generate random number size of the array
+  //$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+?> -->
 
 <body <?php body_class(); ?> style="background-image: url('<?php bloginfo('template_directory'); ?>/images/<?php echo $selectedBg; ?>');">
 

@@ -1,6 +1,7 @@
 <?php get_header();  ?>
 
 <div class="main">
+<div id="space-invader"></div>
   <div class="container">
 <div class="cContainer frontMinHeight">
       <div class="creditsSide hideAtSize frontPageOnly">
@@ -9,8 +10,18 @@
            
                 <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
            
-            <div class="creditsToggle frontPageToggle hideAtSize">
-            <?php the_post_thumbnail( 'medium' ) ?>  
+            <div class="creditsToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 400 400">
+              <defs>
+                <!-- The text path: see links above regarding coordinate system -->
+                <path d="M0, 200a200, 200 0 1, 0 400, 0a200, 200 0 1, 0 -400, 0" id="txt-path"></path>
+              </defs>
+
+              <text fill="#848484" font-size="59" font-weight="600">
+                <!-- This is the magic -->
+                <textPath startOffset="0" xlink:href="#txt-path">PROJECTS, COLLABORATIONS AND SERVICES</textPath>
+              </text>
+            </svg>
             </div>      
             <div class="creditsContent away">
             <span class="close thick"></span>

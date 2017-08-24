@@ -65,6 +65,11 @@ function hackeryou_scripts() {
   	true //load in footer
   );
 
+
+
+
+
+
   wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source
@@ -80,6 +85,7 @@ function hackeryou_scripts() {
     null, // version number
     true //load in footer
   );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
