@@ -5,7 +5,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php  wp_title('|', true, 'right'); ?></title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Overpass:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <!-- stylesheets should be enqueued in functions.php -->
   <?php wp_head(); ?>
@@ -17,16 +17,16 @@
   //$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
 ?> -->
 
-<body <?php body_class(); ?> style="background-image: url('<?php bloginfo('template_directory'); ?>/images/<?php echo $selectedBg; ?>');">
+<body <?php body_class(); ?>">
 
 <header>
-  <div class="container">
+  <div class="container wrapper">
 <div class="headerContent">
-  <h3 class="headerFont">
+  <h1 class="headerFont">
     <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
       <?php bloginfo( 'name' ); ?>
     </a>
-  </h3>
+  </h1>
     <div class="fuckyou" id="">
      <div class="fa fa-bars " title="menu">
       <div id="nav-icon4">
@@ -38,11 +38,21 @@
   
      
    </div> 
-   <div class="Menuflex" id="Menuflex">
+   <div class="Menuflex wrapper" id="Menuflex">
+     <button href="#" class="menu-btn">
      <div class="menuToggle" id="menuToggle">
-       Menu
+         <div class="loading-bar option1">
+           <div class="loading"></div>
+         </div>
+           <div class="loading-bar option1">
+           <div class="loading"></div>
+         </div>
+           <div class="loading-bar option1">
+           <div class="loading"></div>
+         </div>
      </div>
-         <div class="menuContent away" >
+     </button>
+         <div class="menu" id="menu" >
       <?php wp_nav_menu( array(
         'container' => false,
         'theme_location' => 'primary'

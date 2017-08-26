@@ -10,6 +10,7 @@
 @import 'normalize';
 @import 'footer';
 @import 'hamburger';
+@import 'cube';
 // @import 'navigation';
 /*
 ====================================
@@ -22,9 +23,15 @@ img {
 }
 
 body {
-	color: #333;
-	// cursor: pointer;
-	cursor: url('images/hand.png'), auto;
+	background: linear-gradient(to bottom,#ACABAB 0,#fff);
+	background-size: 100% !important;
+
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	position: relative;
+	left: 0;
+
 }
 
 
@@ -66,8 +73,9 @@ footer{
 ///
 // fonts 
 
-$headfont: 'Montserrat', sans-serif;
-$bodyfont:'Overpass', sans-serif;
+
+$headfont: 'Nunito', sans-serif;
+$bodyfont:'Nunito', sans-serif;
 
 @mixin fontSize($sizeValue){
     font-size: $sizeValue * 1px;
@@ -80,9 +88,14 @@ $bodyfont:'Overpass', sans-serif;
 // P's & H's
 
 h1{
-	@include fontSize(35);
+	@include fontSize(40);
 	font-family: $headfont;
-	color:black;
+	text-transform: uppercase;
+	font-weight: 400;
+	a {
+		color: #848484;
+
+	}
 
 }
 h2 {
@@ -98,6 +111,7 @@ h3 {
 	margin: 0;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	font-weight: bold;
 	a {
 		color:#636363;
 	}
@@ -105,6 +119,10 @@ h3 {
 }
 .headerFont {
 	    margin-top: 25px;
+	    width: 50px;
+	    position: fixed;
+	        left: 20px;
+	    z-index: 99;
 }
 h4{
 	@include fontSize(10);
@@ -146,8 +164,6 @@ body {
 	background-size: 40%;
 	background-attachment:fixed;
 	color: #333;
-	font-family: $bodyfont;
-	cursor: url('images/hand.png'), auto;
 	// p, a {
 	// 	cursor: url('images/hand.png'), auto;
 	// }
@@ -161,11 +177,8 @@ header{
 
 }
 ul.menu {
-	display: flex;
     list-style: none;
-	justify-content: flex-end;
-    // position: relative;
-    // top: -40px;
+
 
 	li {
 		display: inline;
@@ -173,35 +186,103 @@ ul.menu {
 		a {
 				text-decoration: none;
 				&:hover {
-					text-decoration: line-through;
+					text-decoration: underline;
 			    	}
 		}
 	}
 }
 //hamburger menu
-.fuckyou {
-	display: none;
+.headerContent,.creditsSide {
+	z-index: 99;
 }
+.wrapper {
+  position: relative;
+  left: 0;
+}
+#menu {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  left: -300px;
+  z-index: 1000;
+  background-color: #2723C2;
+  overflow: auto;
+  z-index: -1;
+}
+#menu,
+.wrapper{
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#menu ul {
+  list-style: outside none none;
+}
+#menu ul h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5em;
+  cursor: default;
+}
+
+
+#menu ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 300;
+  font-size: 2.4em;
+}
+#menu.menu-open {
+	left: 0px;
+}
+.menu-push {
+	left: 300px;
+}
+.menu-btn {
+  color: #2723C2;
+  border: none;
+  position: fixed;
+  top: 160px;
+  left:-3px;
+  padding: 30px;
+  background-color: transparent;
+  outline: none;
+  z-index: 99;
+}
+
+//header content menu open 
+
+.headerOpen{ 
+	position: absolute;
+    left: -300px;
+    transition: all 0.3s ease;
+    a {
+    	color: white;
+    }
+    text { 
+	fill:white;
+    }
+}
+
 .fa-bars{
 	display: none;
 }
+#menu-header-menu {
+	width: 140px;
+	position: absolute;
+    left: 23px;
+    top: 300px;
+}
+#menu-item-178 {
+	position: relative;
+	bottom: 80px;
+}
 
 
-.Menuflex {
-	display: flex;
-	// position: fixed;
-}
-#menu-item-36{
-	    margin-left: 19%;
-}
+
 #menuToggle {
-	// margin-top: 20px;
-	// cursor: pointer;
-	cursor: url('images/hand.png'), auto;
-	width: 20%;
-	margin: 20px 0;
-	font-family: $headfont;
-
  }
 
  .menuContent {
@@ -218,9 +299,8 @@ ul.menu {
 }
 .creditsToggle {
 	position: absolute;
-    top: 35%;
-    // cursor: pointer;
-    cursor: url('images/hand.png'), auto;
+    top: 30%;
+
     img {
     	    width: 75px;
     	    height: 155%;
@@ -259,8 +339,6 @@ ul.menu {
     	margin-top: 0
     }
     span {
-    	// cursor: pointer;
-    	cursor: url('images/hand.png'), auto;
     }
 }
 .strikeMenu {
@@ -402,13 +480,7 @@ ul.bxslider {
 	color: grey;
 }
 
-//active links
-.active{
-   text-decoration: line-through;
-}
-.activeMenu {
-	text-decoration: underline !important;
-}
+
 
 //publications stylings 
 .publicationsMain {
@@ -514,10 +586,10 @@ h4.entry-title {
 
 //front page animation
 .itemLinkeachFront {
-	// width: 10%;
 	img {
 		width: 85px;
 		max-width: none;
+		z-index: -1;
 		// height: 100%
 	}
 	// p {
@@ -533,8 +605,7 @@ h4.entry-title {
 	// padding: 40px 0 0;
     position: relative;
     top: -30px;
-    // cursor: pointer;
-    // cursor: url('images/hand.png'), auto;
+
     text-align: center;
     @include fontSize(8);
 
@@ -707,6 +778,106 @@ h4.entry-title {
     }
     
 }
+.itemLinkeachFront:nth-child(14) {
+    position: absolute;
+    top: 43%;
+    left: 43%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+.itemLinkeachFront:nth-child(15) {
+    position: absolute;
+    top: 47%;
+    left: 43%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+.itemLinkeachFront:nth-child(16) {
+    position: absolute;
+    top: 53%;
+    left: 43%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+.itemLinkeachFront:nth-child(17) {
+    position: absolute;
+    top: 59%;
+    left: 53%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+}
+.itemLinkeachFront:nth-child(18) {
+    position: absolute;
+    top: 43%;
+    left: 58%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+.itemLinkeachFront:nth-child(19) {
+    position: absolute;
+    top: 53%;
+    left: 43%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+.itemLinkeachFront:nth-child(20) {
+    position: absolute;
+    top: 53%;
+    left: 43%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }   
+ .itemLinkeachFront:nth-child(21) {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+.itemLinkeachFront:nth-child(22) {
+    position: absolute;
+    top: 53%;
+    left: 43%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+}
+.itemLinkeachFront:nth-child(23) {
+    position: absolute;
+    top: 39%;
+    left: 43%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+  }
+.itemLinkeachFront:nth-child(24) {
+    position: absolute;
+    top: 39%;
+    left: 43%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+  }
+.itemLinkeachFront:nth-child(25) {
+    position: absolute;
+    top: 38%;
+    left: 37%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+
+   
+   
+   
 
 
 @keyframes trackAnimate {
@@ -762,6 +933,72 @@ svg {
     z-index: -1;
 }
 
+	.creditsSide{
+	width: 15%;
+	position: fixed;
+    top: 82vh;
+}
+
+//menu styling
+$bar: 7px;
+$foo: $bar * 11;
+
+
+.menuToggle {
+  width: $foo;
+}
+
+.loading-bar {
+  width: $foo;
+  height: $bar;
+  padding-top:10px;
+  
+  .loading {
+    position: relative;
+    border-radius:10px;
+    width: $bar;
+    height: $bar;
+    background: #2a36b1;
+    animation: grow 3s linear infinite, move 3s linear infinite;
+    
+    &:after {
+      display: block;
+      content: '';
+      position: relative;
+      width: $bar;
+      height: $bar / 2;
+      padding: 0 5px;
+      top: $bar * 2;
+      left: -5px;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%,rgba(0,0,0,0) 100%);
+      animation: grow 3s linear infinite;
+    }
+  }
+}
+
+@keyframes move {
+  0%    { left: 0           ; }
+  16.7% { left: 0           ; }
+  33.3% { left: $foo / 2    ; }
+  50%   { left: $foo - $bar ; }
+  66.7% { left: $foo / 2    ; }
+  83.3% { left: 0           ; }
+  100%  { left: 0           ; }
+}
+
+@keyframes grow {
+  0%    { width: $bar     ; }
+  16.7% { width: $foo / 2 ; }
+  33.3% { width: $foo / 2 ; }
+  50%   { width: $bar     ; }
+  66.7% { width: $foo / 2 ; }
+  83.3% { width: $foo / 2 ; }
+  100%  { width: $bar     ; }
+}
+.whiteLines {
+	background-color: white !important;
+}
+
 
 //media Queries 
 @media(max-width: 1170px){
@@ -784,12 +1021,7 @@ svg {
 	position: fixed;
     top: 82vh;
 }
-	// .container{
-	// 	width: 95%;
-	// }
-		#menu-item-36{
-	    margin-left: 16%;
-	}
+
 }
 
 @media(max-width: 967px){
@@ -818,6 +1050,7 @@ svg {
 	.headerFont{
 		margin-top: 60px;
 	}
+
 		.menuContent{
 			left: 0;
 			width: 100%;
@@ -852,8 +1085,6 @@ svg {
 		}
 		.fa-bars {
 		width: 60px;
-		// cursor: pointer;
-		cursor: url('images/hand.png'), auto;
 		display: block;
 		height: 67px;
 		padding: 13px 10px;

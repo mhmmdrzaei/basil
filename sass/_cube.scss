@@ -1,0 +1,81 @@
+.containerCube {
+  perspective: 1000px; /* Viewing distance */
+  perspective-origin: 50% 100px; /* x, y viewing angle */
+  position: fixed;
+      left: 92%;
+      top: 91%;
+      cursor: pointer;
+}
+
+.axis {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transform-style: preserve-3d; /* Makes sides 3D-able as seen in the "translateX, Y or Z below */
+}
+
+.axis > div {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+.front{
+  transform: rotateY(0deg) translateZ(25px);
+}
+.back{
+  transform: rotateY(180deg) translateZ(25px);
+}
+
+.right{
+  transform: rotateY(90deg) translateZ(25px);
+}
+.left{
+  transform: rotateY(-90deg) translateZ(25px);
+}
+
+.top{
+  transform: rotateX(-90deg) translateZ(-25px);
+}
+.bottom{
+  transform: rotateX(90deg) translateZ(-25px);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATION */
+@keyframes spinOne {
+	from { transform: rotateY(0); }
+	to { transform: rotateY(360deg); }
+}
+.axis { animation: spinOne 30s infinite linear; }
+.axis > div {
+  transition-delay: 0.5s;
+	transition-duration: 5s;
+}
+.axis:hover > div {
+  transform: rotateX(0deg) rotateY(0deg) translateZ(0px);
+}
+
+/* GENERAL STYLING */
+/* *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; } */
+
+.axis { }
+.axis > div {
+  background: rgba(255,255,255,0.1);
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.2);
+  font-size: 10px;
+  text-align: center;
+  line-height: 50px;
+  color: rgba(0,0,0,0.5);
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
