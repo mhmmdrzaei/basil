@@ -192,7 +192,7 @@ $(document).mousemove(function(e) {
 });
 
 //menu
-$("button,a").click(function(){
+$("button").click(function(){
   $("body").toggleClass("menu-push");
   $(".menu").toggleClass("menu-open");
   $(".headerContent, .creditsToggle").toggleClass("headerOpen");

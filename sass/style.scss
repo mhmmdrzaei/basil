@@ -48,12 +48,17 @@ body {
  	margin-top: 5px;
 }
 
+.homeContent {
+	width: 95%;
+}
 .content {
 	// width: 930px;
-	width: 95%;
-	margin: 0 auto;
+	// width: 95%;
+	// margin: 0 auto;
 	min-height: 550px;
 	margin-bottom: 30px;
+	position: relative;
+	top: 260px;
 }
 
 .full {
@@ -94,14 +99,16 @@ h1{
 	font-weight: 400;
 	a {
 		color: #848484;
+		font-family: $headfont;
 
 	}
 
 }
 h2 {
 	@include fontSize(12);
+	color: #232323;
 	font-family: $headfont;
-	color:black;
+	text-transform: uppercase;;
 	
 	}
 h3 {
@@ -114,6 +121,7 @@ h3 {
 	font-weight: bold;
 	a {
 		color:#636363;
+		font-family: $headfont;
 	}
 
 }
@@ -139,10 +147,11 @@ a {
 }
 p {	
 	letter-spacing: 1px;
-	font-family: $bodyfont;
+	font-family: $headfont;
 	color:black;
 	@include fontSize(9);
 	a {
+		font-family: $headfont;
 		color:#grey;
 		text-decoration: none;
 		&:hover {
@@ -158,7 +167,7 @@ p {
 // }
 
 body {
-	
+	font-family: $headfont;
 	background: linear-gradient(to bottom, #ffffff 0%,#cccccc 100%);
 	background-repeat: repeat;
 	background-size: 40%;
@@ -244,7 +253,7 @@ ul.menu {
   color: #2723C2;
   border: none;
   position: fixed;
-  top: 160px;
+  top: 185px;
   left:-3px;
   padding: 30px;
   background-color: transparent;
@@ -277,7 +286,7 @@ ul.menu {
 }
 #menu-item-178 {
 	position: relative;
-	bottom: 80px;
+	bottom: 52px;
 }
 
 
@@ -300,6 +309,7 @@ ul.menu {
 .creditsToggle {
 	position: absolute;
     top: 30%;
+    cursor: pointer;
 
     img {
     	    width: 75px;
@@ -325,18 +335,22 @@ ul.menu {
 }
 .creditsContent {
 	position: absolute;
-    top: 16%;
-    left: 10px;
+	top: -480px;
     margin: 6px;
-    border: 3px solid black;
-    border-radius: 10px;
+    border: 3px solid white;
+    border-radius: 5px;
+    opacity: .9;
     padding: 13px;
-    background: rgba(255,255,255, 0.9);
+    background: #2723C2;
     width: 600px;
     z-index: 199;
+
     // max-width: 55%;
     p {
-    	margin-top: 0
+    	margin-top: 0;
+    	color: white;
+    	font-family: $headfont;
+
     }
     span {
     }
@@ -389,13 +403,13 @@ ul.wp-tag-cloud{
 }
 .projectsMain{
 	width: 80%;
-	margin-top: 25px;
+	margin-top: 10px;
 	
 }
 .projectpost, .publicationspost, .servicespost {
 	// width: 30%;
 	// height: 30%;
-	padding: 10px;
+	padding: 5px;
 	img {
 		// max-height: 200px;
 		// max-width: 400px;
@@ -407,7 +421,7 @@ ul.wp-tag-cloud{
 	}
 	.paragraph {
 		width: 85%;
-		margin: 0px 0 50px 0;
+		margin: 0px 0 10px 0;
 		font-weight: bold;
 		// text-align: right;
 		@include fontSize(8);
@@ -549,8 +563,10 @@ h4.entry-title {
 .close{
   position: relative;
   display: inline-block;
+  cursor: pointer;
   width: 30px;
   height: 30px;
+  margin-bottom: 14px;
   overflow: hidden;
   &:hover {
     &::before, &::after {
@@ -561,12 +577,12 @@ h4.entry-title {
   &::before, &::after {
     content: '';
     position: absolute;
-    height: 1px;
+    height: 3px;
     width: 100%;
     top: 50%;
     left: 0;
     margin-top: -1px;
-    background: #000;
+    background: white;
   }
   &::before {
   	transform: rotate(45deg);
@@ -578,7 +594,7 @@ h4.entry-title {
   }
   &.thick {
     &::before, &::after {
-      height: 2px;
+      height: 3px;
       margin-top: -2px;
     }
   }
@@ -1143,7 +1159,15 @@ $foo: $bar * 11;
 		p {
 			 margin: 0 0 15px;
 		}
+
 	}
+
+		.redProject{
+			&:hover{
+			background-color:red;
+		}
+	}
+
 	.creditsToggle {
 		width: 130%;
 		top: 0;

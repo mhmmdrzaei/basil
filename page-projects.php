@@ -1,27 +1,57 @@
 <?php get_header(); ?>
 
 <div class="main">
+<div id="space-invader"></div>
   <div class="container">
 <div class="cContainer">
 
       <div class="content">
   <div class="sidebarProjects">
-  
+  <div class="containerCube cubeProjects">
+    <div class="axis">
+      <div class="front">BZL BZL</div>
+      <div class="back">BZL BZL</div>
+      <div class="left">BZL BZL</div>
+      <div class="right">BZL BZL</div>
+      <div class="top"></div> 
+      <div class="bottom"></div>
+    </div>
+  </div>
+  <div class="creditsSide hideAtSize frontPageOnly">
+     <div class="creditsHeader">
+            <?php $the_query = new WP_Query( 'page_id=13' ); ?>
+       
+            <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
+       
+        <div class="creditsToggle">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 400 400">
+          <defs>
+            <!-- The text path: see links above regarding coordinate system -->
+            <path d="M0, 200a200, 200 0 1, 0 400, 0a200, 200 0 1, 0 -400, 0" id="txt-path"></path>
+          </defs>
+
+          <text fill="#848484" font-size="51" font-weight="400" letter-spacing="2px">
+            <!-- This is the magic -->
+            <textPath startOffset="0" xlink:href="#txt-path">PROJECTS, COLLABORATIONS AND SERVICES</textPath>
+          </text>
+        </svg>
+        </div>      
+        <div class="creditsContent away">
+        <span class="close thick"></span>
+          <?php the_content(); ?>
+            
+          </div>   
+       
+        <?php endwhile;?>
+       </div>
+  </div>
     <div class="sidebarblog">
-      <p class="ProjectsText">Projects</p>
+      <h2 >Projects</h2>
       <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
           <?php $the_query = new WP_Query( 'page_id=13' ); ?>
      
           <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
      
-      <div class="creditsToggle hideAtSize">
-      <?php the_post_thumbnail( 'full' ) ?>  
-      </div>      
-      <div class="creditsContent away">
-      <span class="close thick"></span>
-        <?php the_content(); ?>
-          
-        </div>   
      
       <?php endwhile;?>
       
@@ -40,12 +70,13 @@
        <?php $dreamBeanQuery->the_post(); ?>
        <?php $dreamBeanQuery->the_content(); ?> 
        
-     
+        <a clas="redProject" href="<?php the_permalink(); ?>">
          <div class="projectpost">
            <?php the_post_thumbnail( 'medium' ) ?>
-           <div class="paragraph"><a href="<?php the_permalink(); ?>">
-                     <?php the_title(); ?></a></div>
+           <div class="paragraph">
+                     <?php the_title(); ?></div>
          </div>
+         </a>
      
          <?php endwhile; ?>
          <?php wp_reset_postdata(); ?> 

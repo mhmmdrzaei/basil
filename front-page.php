@@ -33,7 +33,7 @@
            </div>
       </div>
   
-      <div class="content">
+      <div class="homeContent">
   
         <?php // Start the loop ?>
           <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
