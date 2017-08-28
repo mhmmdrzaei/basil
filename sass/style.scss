@@ -394,7 +394,11 @@ ul.wp-tag-cloud{
 	width: 100%;
 }
 .yearComplete {
-	width: 80%;
+	width: 75%;
+	    margin: 0 auto 200px;
+	    position: relative;
+	    left: 10%;
+	    top: 85px;
 }
 .sidebarblog{
 	width: 20%;
@@ -404,6 +408,12 @@ ul.wp-tag-cloud{
 .projectsMain{
 	width: 80%;
 	margin-top: 10px;
+	a {
+		&:hover {
+			background: #FF0000;
+			box-shadow: -12px 11px 30px -6px rgba(0,0,0,0.75);
+		}
+	}
 	
 }
 .projectpost, .publicationspost, .servicespost {
@@ -426,7 +436,12 @@ ul.wp-tag-cloud{
 		// text-align: right;
 		@include fontSize(8);
 
+
 	}
+
+}
+.block {
+	display: none;
 }
 //tag Page
 .mainTag {
@@ -489,6 +504,15 @@ ul.bxslider {
 //single project
 .contentWelcome{
 	left: -40px;
+	.extraProjectsInfo{
+		p {
+			margin: 0;
+			font-weight: bold;
+			text-decoration: underline;
+		}
+
+
+	}
 }
 .artistCaption {
 	color: grey;
@@ -1162,11 +1186,7 @@ $foo: $bar * 11;
 
 	}
 
-		.redProject{
-			&:hover{
-			background-color:red;
-		}
-	}
+	
 
 	.creditsToggle {
 		width: 130%;

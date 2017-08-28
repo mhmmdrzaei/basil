@@ -46,7 +46,7 @@
        </div>
   </div>
     <div class="sidebarblog">
-      <h2 >Projects</h2>
+      <h2 style="margin-bottom: 0">Projects:</h2>
       <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
           <?php $the_query = new WP_Query( 'page_id=13' ); ?>
      
@@ -73,9 +73,19 @@
         <a clas="redProject" href="<?php the_permalink(); ?>">
          <div class="projectpost">
            <?php the_post_thumbnail( 'medium' ) ?>
+          
+          
+
            <div class="paragraph">
-                     <?php the_title(); ?></div>
+                     <?php the_title(); ?>
+            
+            </div>
+            <div class="extraProjectsInfo block">
+              <p><?php the_field('year_projects'); ?></p>
+              <p><?php the_field('location_project'); ?></p>
+            </div>
          </div>
+
          </a>
      
          <?php endwhile; ?>

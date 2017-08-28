@@ -198,3 +198,8 @@ $("button").click(function(){
   $(".headerContent, .creditsToggle").toggleClass("headerOpen");
   $(".loading").toggleClass("whiteLines")
 }); 
+
+//hoverextra infor
+$('a.redProject').hover(function(){
+    ('   .extraProjectsInfo').toggleClass('block');
+});
