@@ -192,6 +192,24 @@ function hackeryou_widgets_init() {
 		'after_title' => '</h2>',
 	) );
 
+		register_sidebar( array(
+		'name' => 'services Catagory Area',
+		'id' => 'services-widget-area',
+		'description' => 'The Services widget area',
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	) );
+		register_sidebar( array(
+		'name' => 'Publications Catagory Area',
+		'id' => 'publications-widget-area',
+		'description' => 'The publications widget area',
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	) );
 }
 
 add_action( 'widgets_init', 'hackeryou_widgets_init' );

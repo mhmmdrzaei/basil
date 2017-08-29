@@ -55,10 +55,10 @@ body {
 	// width: 930px;
 	// width: 95%;
 	// margin: 0 auto;
-	min-height: 550px;
+	min-height: 650px;
 	margin-bottom: 30px;
-	position: relative;
-	top: 260px;
+	// position: relative;
+	// top: 260px;
 }
 
 .full {
@@ -73,7 +73,7 @@ footer{
 
 }
 .frontMinHeight {
-	min-height: 600px;
+	min-height: 660px;
 }
 ///
 // fonts 
@@ -382,6 +382,7 @@ ul.menu {
 	flex-wrap: wrap;
 	position: relative;
 	left: 220px;
+
 }
 .mainTag {
 	top: 250px;
@@ -419,12 +420,10 @@ ul.wp-tag-cloud{
 }
 .projectsMain{
 	width: 80%;
+	top: 250px;
 	// margin-top: 10px;
 	a.redProject {
 		.projectpost{
-			.paragraph{
-				padding: 10px;
-			}
 			&:hover {
 				background: #FF0000;
 				box-shadow: -12px 11px 30px -6px rgba(0,0,0,0.75);
@@ -443,7 +442,7 @@ ul.wp-tag-cloud{
 		font-weight: bold;
 		// text-align: right;
 		@include fontSize(8);
-
+		padding: 10px;
 
 	}
 
@@ -451,18 +450,37 @@ ul.wp-tag-cloud{
 .block {
 	display: none;
 }
-//tag Page
-.mainTag {
-	width: 80%;
+
+//tag page 
+.tagPost {
+	padding: 5px;
 	article {
-		width: 25%;
-		height: 25%;
+		width: 230px;
+		overflow: hidden;
+		cursor: pointer;
+		&:hover {
+			background: #FF0000;
+			box-shadow: -12px 11px 30px -6px rgba(0,0,0,0.75);
+		}
 		.projectpost{
-			width: 100%;
-			height: 100%;
+			img{
+				width: auto;
+				height: 230px;
+			}
+			p {
+				width: 85%;
+				margin: 0px;
+				font-weight: bold;
+				// text-align: right;
+				@include fontSize(8);
+				padding: 0 10px;
+			
+				}
+			}
 		}
 	}
-}
+
+
 
 //bx slider
 .bx-wrapper .bx-viewport {
@@ -625,6 +643,10 @@ h4.entry-title {
 }
 
 //single pages
+.indexContent {
+	position: relative;
+	top: 250px;
+}
 .socialmedia {
 	display: flex;
 	flex-wrap: wrap;
@@ -695,8 +717,7 @@ h4.entry-title {
 }
 
 //front page animation
-.itemLinkeachFront {
-
+.itemLinkeachFront, .serviceItemLink {
 
 	img {
 		width: 85px;
@@ -879,7 +900,7 @@ h4.entry-title {
     top: 53%;
     left: 43%;
     img {
-    	animation: skewSix 4s ease-in-out infinite;
+    	animation: skewSix 7s ease-in-out infinite;
     }
     
 }
@@ -888,7 +909,7 @@ h4.entry-title {
     top: 53%;
     left: 43%;
     img {
-    	animation: sevenMatrix 4s ease-in-out infinite;
+    	animation: sevenMatrix 9s ease-in-out infinite;
     }
     
 }
@@ -897,7 +918,7 @@ h4.entry-title {
     top: 53%;
     left: 43%;
     img {
-    	animation: ninthThreeDee 4s ease-in-out infinite;
+    	animation: ninthThreeDee 10s ease-in-out infinite;
     }
     
 }
@@ -906,7 +927,7 @@ h4.entry-title {
     top: 53%;
     left: 43%;
     img {
-    	animation: ninthThreeDee 4s ease-in-out infinite;
+    	animation: spin 43s ease-in-out infinite;
     }
     
 }
@@ -915,7 +936,7 @@ h4.entry-title {
     top: 43%;
     left: 43%;
     img {
-    	animation: ninthThreeDee 4s ease-in-out infinite;
+    	animation: waveLeft 4s ease-in-out infinite;
     }
  }
 .itemLinkeachFront:nth-child(15) {
@@ -923,7 +944,7 @@ h4.entry-title {
     top: 47%;
     left: 43%;
     img {
-    	animation: ninthThreeDee 4s ease-in-out infinite;
+    	animation: waveLeft 4s ease-in-out infinite;
     }
  }
 .itemLinkeachFront:nth-child(16) {
@@ -931,7 +952,7 @@ h4.entry-title {
     top: 53%;
     left: 43%;
     img {
-    	animation: ninthThreeDee 4s ease-in-out infinite;
+    	animation: rotateinspot 8s ease-in-out infinite;
     }
  }
 .itemLinkeachFront:nth-child(17) {
@@ -947,7 +968,7 @@ h4.entry-title {
     top: 43%;
     left: 58%;
     img {
-    	animation: ninthThreeDee 4s ease-in-out infinite;
+    	animation: twoShake .3s infinite;
     }
  }
 .itemLinkeachFront:nth-child(19) {
@@ -971,7 +992,7 @@ h4.entry-title {
     top: 50%;
     left: 40%;
     img {
-    	animation: ninthThreeDee 4s ease-in-out infinite;
+    	animation: spin 4s linear infinite;
     }
  }
 .itemLinkeachFront:nth-child(22) {
@@ -979,7 +1000,7 @@ h4.entry-title {
     top: 53%;
     left: 43%;
     img {
-    	animation: ninthThreeDee 4s ease-in-out infinite;
+    	animation: twoShake .3s infinite;
     }
 }
 .itemLinkeachFront:nth-child(23) {
@@ -999,6 +1020,56 @@ h4.entry-title {
     }
   }
 .itemLinkeachFront:nth-child(25) {
+    position: absolute;
+    top: 38%;
+    left: 37%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+
+
+ .serviceItemLink:nth-child(01) {
+    position: absolute;
+    top: 38%;
+    left: 37%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+  .serviceItemLink:nth-child(02) {
+    position: absolute;
+    top: 38%;
+    left: 37%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+  .serviceItemLink:nth-child(03) {
+    position: absolute;
+    top: 38%;
+    left: 37%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+  .serviceItemLink:nth-child(04) {
+    position: absolute;
+    top: 38%;
+    left: 37%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+  .serviceItemLink:nth-child(05) {
+    position: absolute;
+    top: 38%;
+    left: 37%;
+    img {
+    	animation: ninthThreeDee 4s ease-in-out infinite;
+    }
+ }
+  .serviceItemLink:nth-child(06) {
     position: absolute;
     top: 38%;
     left: 37%;
@@ -1163,6 +1234,69 @@ $foo: $bar * 11;
 		}
 	}
 
+// scrolling text
+.block {
+	height: 30vh;
+	border: 1px solid black;
+	margin: 30px;
+	position: relative;
+	overflow: hidden;
+	background: black;
+}
+
+.text {
+	font-size: 136px;
+	color: green;
+	text-shadow: 1px 1px 1px #fff;
+	display: inline-block;
+	white-space: nowrap;
+	position: absolute;
+	top: 50%;	; transform: translateY(-50%);
+}
+
+.smalltext {
+	color: orange;
+}
+
+.anim {
+	transform: translateX(0) translateY(-50%);
+	animation-name: scrolling;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+  animation-direction: alternate;
+	animation-timing-function: linear; 
+	left: 50%
+}
+
+@keyframes scrolling {
+	0% {transform: translateY(-50%) translateX(0); left: 0%}
+	15% {transform: translateY(-50%) translateX(0); left: 0%}
+	85% {transform: translateY(-50%) translateX(-100%); left: 100%}
+	100% {transform: translateY(-50%) translateX(-100%); left: 100%}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1297,6 +1431,7 @@ $foo: $bar * 11;
 				}
 			}
 		}
+		
 
 	
 	.sidebarProjects{

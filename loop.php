@@ -16,19 +16,23 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<a class="redProject" href="<?php the_permalink(); ?>">	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="projectpost">
-            <?php the_post_thumbnail( 'medium' ) ?>
-            <p><a href="<?php the_permalink(); ?>">
-                      <?php the_title(); ?></a></p>
-          </div>
+			<div class="overflowImage">
+		            <?php the_post_thumbnail( 'medium' ) ?>
+		    </div>
 
+		           <div class="paragraph">
+		                      <?php the_title(); ?></div>
+
+		             
+		    </div>
+		
 			<footer>
 			</footer>
-
+		
 		</article><!-- #post-## -->
-
-
+</a>
 
 <?php endwhile; // End the loop. Whew. ?>
 

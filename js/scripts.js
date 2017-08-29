@@ -128,7 +128,7 @@ $(function(){
         {top : "+=47%", left: "-=12%"}, 10000, function() {}
     );
     $(".itemLinkeachFront:nth-child(10)").animate(
-        {top : "+=32%", left: "+=85%"}, 10000, function() {}
+        {top : "+=32%", left: "+=85%"}, 12000, function() {}
     );
     $(".itemLinkeachFront:nth-child(11)").animate(
         {top : "+=40%", left: "+=35%"}, 10000, function() {}
@@ -167,7 +167,7 @@ $(function(){
         {top : "-=28%", left: "+=75%"}, 10000, function() {}
     );
         $(".itemLinkeachFront:nth-child(22)").animate(
-        {top : "+=40%", left: "+=70%"}, 10000, function() {}
+        {top : "+=42%", left: "+=68%"}, 10000, function() {}
     );
     $(".itemLinkeachFront:nth-child(23)").animate(
         {top : "+=32%", left: "+=75%"}, 10000, function() {}
@@ -179,6 +179,27 @@ $(function(){
         $(".itemLinkeachFront:nth-child(25)").animate(
         {top : "+=38%", left: "+=62%"}, 10000, function() {}
     );
+
+        $(".serviceItemLink:nth-child(01)").animate(
+            {top : "+=15%", left: "-=5%"}, 10000, function() {}
+        );
+        $(".serviceItemLink:nth-child(02)").animate(
+            {top : "+=15%", left: "+=15%"}, 10000, function() {}
+        );
+        $(".serviceItemLink:nth-child(03)").animate(
+            {top : "+=15%", left: "+=35%"}, 10000, function() {}
+        );
+         $(".serviceItemLink:nth-child(04)").animate(
+            {top : "+=45%", left: "-=5%"}, 10000, function() {}
+        );
+         $(".serviceItemLink:nth-child(05)").animate(
+            {top : "+=45%", left: "+=15%"}, 10000, function() {}
+        );
+
+        $(".serviceItemLink:nth-child(06)").animate(
+            {top : "+=45%", left: "+=35%"}, 10000, function() {}
+        );
+
 
 
 });
@@ -202,4 +223,13 @@ $("button").click(function(){
 //hoverextra infor
 $('.fuckyouforever').mouseover(function(){
     $('.frontpagename').toggleClass('openPage');
+});
+
+//scrolling text
+$(window).ready(function() {
+    $.each( $(".text"), function() {
+        // $time = $(this).width()/500;
+        // $(this).css('animation-duration', $time+'s');
+        $(this).width() > $(".block").width() ? $(this).addClass('anim') : $(this).removeClass('anim');
+    });
 });

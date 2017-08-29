@@ -54,11 +54,9 @@
        
      </div>
 </div>
-   	  <div class="projectsMain mainTag">
-      <div class="projectpost">
+   	  <div class="projectsMain">
    	  	<?php get_template_part( 'loop', 'tag' ); ?>
-        <div class="projectpost">
-   	  </div>
+
    	
    	</div> <!-- /.content -->
              <div class="creditsSide showAtSize">
