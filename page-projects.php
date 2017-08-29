@@ -56,7 +56,7 @@
       <?php endwhile;?>
       
     </div>
-
+</div>
  <div class="projectsMain"> 
        <?php $dreamBeanQuery = new WP_Query(array(
                // 'post_per_page' => 1,// if you want all its -1
@@ -70,19 +70,18 @@
        <?php $dreamBeanQuery->the_post(); ?>
        <?php $dreamBeanQuery->the_content(); ?> 
        
-        <a clas="redProject" href="<?php the_permalink(); ?>">
+        <a class="redProject" href="<?php the_permalink(); ?>">
          <div class="projectpost">
+           <div class="overflowImage">
            <?php the_post_thumbnail( 'medium' ) ?>
+             
+           </div>
           
           
 
            <div class="paragraph">
                      <?php the_title(); ?>
             
-            </div>
-            <div class="extraProjectsInfo block">
-              <p><?php the_field('year_projects'); ?></p>
-              <p><?php the_field('location_project'); ?></p>
             </div>
          </div>
 
@@ -91,7 +90,9 @@
          <?php endwhile; ?>
          <?php wp_reset_postdata(); ?> 
                    <!-- this will end the and reset and go back to normal so you can go back to normal to your page -->
-         <?php endif; ?></div>
+         <?php endif; ?>
+
+  </div>
   
       </div> <!-- /.content -->
       <div class="creditsSide showAtSize">

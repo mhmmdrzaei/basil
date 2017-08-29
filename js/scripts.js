@@ -200,6 +200,6 @@ $("button").click(function(){
 }); 
 
 //hoverextra infor
-$('a.redProject').hover(function(){
-    ('   .extraProjectsInfo').toggleClass('block');
+$('.fuckyouforever').mouseover(function(){
+    $('.frontpagename').toggleClass('openPage');
 });

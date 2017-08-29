@@ -41,14 +41,20 @@
               
               <div class="itemLink">
                 <?php while( has_sub_fields('links_on_page_') ): ?>
-            <div class="itemLinkeachFront">
+            <div href="<?php the_sub_field('link_frontpage'); ?>" class="itemLinkeachFront">
                   <?php $image = get_sub_field('link_png_image');
                       if( !empty($image) ): ?>
-                          <a href="<?php the_sub_field('link_frontpage'); ?>"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
-                          <a href="<?php the_sub_field('link_frontpage'); ?>"><p class="frontpagename"> 
+                          <a class="fuckyouforever" href="<?php the_sub_field('link_frontpage'); ?>">
+
+                          <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    
+                          </a>
+
+                          <p class="frontpagename"> 
+                          <a  href="<?php the_sub_field('link_frontpage'); ?>">
                               <?php the_sub_field('link_label_name'); ?>
-                          </p></a>
-                          
+                          </a>
+                          </p>
                      
         <?php endif; ?>
         </div>

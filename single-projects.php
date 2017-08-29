@@ -1,12 +1,13 @@
 <?php get_header();  ?>
 
 <div class="main">
+<div id="space-invader"></div>
 
 
   <div class="container">
  <div class="cContainer"> 
  <div class="sidebarProjects">
- <div class="containerCube ">
+ <div class="containerCube cubeProjects">
    <div class="axis">
      <div class="front">BZL BZL</div>
      <div class="back">BZL BZL</div>
@@ -44,6 +45,17 @@
        <?php endwhile;?>
       </div>
  </div>
+ <div class="sidebarblog singleSide">
+   <h2 style="margin-bottom: 0">Projects:</h2>
+   <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
+       <?php $the_query = new WP_Query( 'page_id=13' ); ?>
+  
+       <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
+  
+  
+   <?php endwhile;?>
+   
+ </div>
 
 
    
@@ -70,7 +82,7 @@
                                        <li>
                                            <?php $image = get_sub_field('images_projects');
                                                if( !empty($image) ): ?>
-                                                   <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                                   <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']?>" />
                                               
                                                <?php endif; ?>
                                        </li>
@@ -83,6 +95,20 @@
            <div class="extraProjectsInfo">
               <p><?php the_field('year_projects'); ?></p>
               <p><?php the_field('location_project'); ?></p>
+               <p class="catalog">
+               
+                 <?php 
+              
+                 $file = get_field('file_uploader');
+              
+                 if( $file ): ?>
+                   
+                   <a href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?><?php the_field('file_uploader_text'); ?></a>
+              
+                 <?php endif; ?>
+               
+                 </p>
+              
             </div>
               <?php the_content(); ?>
             </div>

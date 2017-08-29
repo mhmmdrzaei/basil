@@ -274,6 +274,11 @@ ul.menu {
 	fill:white;
     }
 }
+.headerOpenNot {
+	text { 
+	fill:#454444;
+    }
+}
 
 .fa-bars{
 	display: none;
@@ -372,11 +377,16 @@ ul.menu {
 }
 
 //projects
-
-.sidebarProjects, .tagBody, .mainTag, .contentSingleProject, .projectsMain {
+.contentSingleProject, .projectsMain {
 	display: flex;
 	flex-wrap: wrap;
+	position: relative;
+	left: 220px;
 }
+.mainTag {
+	top: 250px;
+}
+
 .widget-title {
 	display: none;
 }
@@ -394,41 +404,39 @@ ul.wp-tag-cloud{
 	width: 100%;
 }
 .yearComplete {
-	width: 75%;
+	width: 70%;
 	    margin: 0 auto 200px;
 	    position: relative;
-	    left: 10%;
-	    top: 85px;
+	    left: 185px;
+	    // left: 10%;
+	    top: 10%;
 }
 .sidebarblog{
-	width: 20%;
-	position: relative;
+	width: 30%;
+	position: fixed;
+	top: 255px;
     // left: -66px;
 }
 .projectsMain{
 	width: 80%;
-	margin-top: 10px;
-	a {
-		&:hover {
-			background: #FF0000;
-			box-shadow: -12px 11px 30px -6px rgba(0,0,0,0.75);
+	// margin-top: 10px;
+	a.redProject {
+		.projectpost{
+			.paragraph{
+				padding: 10px;
+			}
+			&:hover {
+				background: #FF0000;
+				box-shadow: -12px 11px 30px -6px rgba(0,0,0,0.75);
+			}
 		}
+		
 	}
 	
 }
 .projectpost, .publicationspost, .servicespost {
 	// width: 30%;
-	// height: 30%;
-	padding: 5px;
-	img {
-		// max-height: 200px;
-		// max-width: 400px;
-		// width: 93%;
-		// height: 93%;
-		height: auto;
-		width:auto;
-		max-height:200px;
-	}
+
 	.paragraph {
 		width: 85%;
 		margin: 0px 0 10px 0;
@@ -466,7 +474,12 @@ ul.wp-tag-cloud{
 	background: none;
 	position: static !important;
 	
-
+.bx-caption{
+	bottom: 15px;
+	background: #2723C2;
+	word-spacing: 3px;
+	font-weight: 400;
+}
 	
 	/*fix other elements on the page moving (on Chrome)*/
 	-webkit-transform: translatez(0);
@@ -509,6 +522,7 @@ ul.bxslider {
 			margin: 0;
 			font-weight: bold;
 			text-decoration: underline;
+			text-transform: uppercase;
 		}
 
 
@@ -517,7 +531,18 @@ ul.bxslider {
 .artistCaption {
 	color: grey;
 }
+.catalog {
+	a {
 
+		text-transform: uppercase;
+		font-weight: 700;
+		&:hover {
+			background: #2723C2;
+			color: white;
+		}
+	}
+
+}
 
 
 //publications stylings 
@@ -525,26 +550,71 @@ ul.bxslider {
 	margin: 0 auto;
 }
 .newsContentMain {
-	margin-left: 4%;
-    width: 80%;
+
 }
 .newsBody {
 	margin-bottom: 40px;
 }
 .newsDate{
-	color: grey;
-	@include fontSize(8);
+	color:#454444;
+	@include fontSize(10);
+	font-weight: 400;
+	text-transform: uppercase;
 
 }
+//newsSVG
 
+.loader{
+
+  height: 70px;
+  width: 35%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  left: 81px;
+}
+
+/*
+  Set the color of the icon
+*/
+
+
+///
+
+.newsTitle {
+	@extend .flex;
+	justify-content: flex-end;
+	h4 {
+		@include fontSize(30);
+		    text-transform: uppercase;
+		    font-weight: 700;
+		    margin: 0 0 0 25px;
+		   color: #454444;
+	}
+}
+.allnewsCredits {
+	width: 1000%;
+	@extend .flex;
+	justify-content:flex-end;
+	.cubeNews {
+    position: relative;
+    top: 5px;
+    left: -15px;
+	}
+
+}
 h4.entry-title {
 		margin: 5px 0;
 	}
 .newspost{
 	h4{	
+		
 		margin: 20px 0 0 0;
 		a{
-			text-decoration: underline;
+			@include fontSize(12);
+			color:#454444;
+			font-weight: 700;
 			text-transform: uppercase;
 			}
 	}
@@ -626,12 +696,15 @@ h4.entry-title {
 
 //front page animation
 .itemLinkeachFront {
+
+
 	img {
 		width: 85px;
 		max-width: none;
 		z-index: -1;
 		// height: 100%
 	}
+	
 	// p {
 	// 	display: none;
 	// 	&:hover {
@@ -639,20 +712,39 @@ h4.entry-title {
 	// 	}
 	// }
 }
+
 .frontpagename {
-	max-width: 100px;
-	opacity: 0;
-	// padding: 40px 0 0;
-    position: relative;
-    top: -30px;
+		max-width: 100px;
+		opacity: 0;
+		// padding: 40px 0 0;
+	    position: relative;
+	    top: -10px;
+	    text-align: center;
+	    @include fontSize(9);
+	    color: #848484;
+	    font-weight: 700;;
+	    // cursor: pointer;
+	    a {
+	    	color: #848484;
+	    	&:hover {
+	    		text-decoration: none;
+	    	}
+	    }
+	    &:hover {
+	    	opacity: 1;
+	    }
 
-    text-align: center;
-    @include fontSize(8);
-
-	&:hover {
-		opacity: 1;
+		// &:hover {
+		// 	opacity: 1;
+		// }
 	}
+	a.fuckyouforever:hover ~ .frontpagename {
+	opacity: 1;
+
 }
+// .openPage {
+// 	opacity: 1;
+// }
 
 
 .itemLinkeachFront:nth-child(1) {
@@ -1038,6 +1130,56 @@ $foo: $bar * 11;
 .whiteLines {
 	background-color: white !important;
 }
+	.newspageCreditsCollabs, .newsToggle{
+		position: inherit;
+		top:0;
+		left: 0;
+		width: 55%;
+	}
+
+.newsCreditsContent{
+	top:-28px;
+	left:15%;
+}
+
+.active {
+	background: #2723C2;
+	color: white;
+	padding: 3px;
+	text-align: center;
+}
+	a.redProject {
+		padding: 5px;
+	}
+	.overflowImage{
+		width: 220px;
+		height: 220px;
+		overflow: hidden;
+		img {
+			width: auto;
+			height: auto;
+			min-height: 220px;
+			min-width: 220px;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //media Queries 
@@ -1151,12 +1293,12 @@ $foo: $bar * 11;
 				height: 50%;
 				margin-bottom: 10px;
 				.projectpost{
-					width: 100%;
-					height: 100%;
+						
 				}
 			}
 		}
 
+	
 	.sidebarProjects{
 		display: block;
 	}
@@ -1168,7 +1310,9 @@ $foo: $bar * 11;
 	.sidebarblog {
 		left: 0;
 		margin-top: 40px;
-		width: 100%;
+		width: 30%;
+		
+
 	}
 	.wp-tag-cloud{
 		display: flex;
@@ -1242,7 +1386,6 @@ $foo: $bar * 11;
 		}
 	}
 	.projectsMain {
-		width: 100%;
 		align-items: center;
 	}
 	.creditsContent{
