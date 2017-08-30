@@ -39,7 +39,10 @@
         <?php // Start the loop ?>
           <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
           
-              
+              <div class="scrolling">
+                <div class="scroll-left"><p><?php the_content();?></p></div>
+              </div>
+
               <div class="itemLink">
                 <?php while( has_sub_fields('links_on_page_') ): ?>
             <div href="<?php the_sub_field('link_frontpage'); ?>" class=" serviceItemLink">
@@ -61,7 +64,7 @@
 
         </div>
     <?php endwhile; ?>
-    
+
       </div>
       
    

@@ -224,12 +224,3 @@ $("button").click(function(){
 $('.fuckyouforever').mouseover(function(){
     $('.frontpagename').toggleClass('openPage');
 });
-
-//scrolling text
-$(window).ready(function() {
-    $.each( $(".text"), function() {
-        // $time = $(this).width()/500;
-        // $(this).css('animation-duration', $time+'s');
-        $(this).width() > $(".block").width() ? $(this).addClass('anim') : $(this).removeClass('anim');
-    });
-});
