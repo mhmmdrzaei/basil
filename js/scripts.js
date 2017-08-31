@@ -181,23 +181,23 @@ $(function(){
     );
 
         $(".serviceItemLink:nth-child(01)").animate(
-            {top : "+=15%", left: "-=5%"}, 10000, function() {}
+            {top : "+=15%", left: "-=15%"}, 10000, function() {}
         );
         $(".serviceItemLink:nth-child(02)").animate(
-            {top : "+=15%", left: "+=15%"}, 10000, function() {}
+            {top : "+=15%", left: "+=5%"}, 10000, function() {}
         );
         $(".serviceItemLink:nth-child(03)").animate(
-            {top : "+=15%", left: "+=35%"}, 10000, function() {}
+            {top : "+=15%", left: "+=25%"}, 10000, function() {}
         );
          $(".serviceItemLink:nth-child(04)").animate(
-            {top : "+=45%", left: "-=5%"}, 10000, function() {}
+            {top : "+=45%", left: "-=15%"}, 10000, function() {}
         );
          $(".serviceItemLink:nth-child(05)").animate(
-            {top : "+=45%", left: "+=15%"}, 10000, function() {}
+            {top : "+=45%", left: "+=5%"}, 10000, function() {}
         );
 
         $(".serviceItemLink:nth-child(06)").animate(
-            {top : "+=45%", left: "+=35%"}, 10000, function() {}
+            {top : "+=45%", left: "+=25%"}, 10000, function() {}
         );
 
 

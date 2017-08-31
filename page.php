@@ -1,7 +1,6 @@
 <?php get_header();  ?>
 
 <div class="main">
-<div id="space-invader"></div>
   <div class="container">
 <div class="cContainer"><!-- <div class="creditsSide hideAtSize">
      <div class="sidebarblog">
@@ -76,9 +75,7 @@
                 <?php endif; ?>
       </div>
       <?php the_content(); ?>
-  
-      
-  
+  <div id="space-invader" style="background-color:<?php the_field('hex_colour'); ?>"></div>
     <?php endwhile; // end the loop?>
   </div> <!-- /,content -->
   <!--     <div class="creditsSide showAtSize">
@@ -111,6 +108,8 @@
       <div class="bottom"></div>
     </div>
   </div>
+
+  
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 

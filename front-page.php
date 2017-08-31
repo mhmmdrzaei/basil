@@ -1,7 +1,6 @@
 <?php get_header();  ?>
 
 <div class="main">
-<div id="space-invader"></div>
   <div class="container">
 <div class="cContainer frontMinHeight">
       <div class="creditsSide hideAtSize frontPageOnly">
@@ -60,7 +59,7 @@
         </div>
     <?php endwhile; ?>
       </div>
-      
+      <div id="space-invader" style="background-color:<?php the_field('hex_colour'); ?>"></div>
    
   
         <?php endwhile; // end the loop?>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="main">
-<div id="space-invader"></div>
+<!-- <div id="space-invader"></div> -->
   <div class="container">
 <div class="cContainer">
 
@@ -67,6 +67,7 @@
      
        <?php if($dreamBeanQuery-> have_posts()):?>
        <?php while($dreamBeanQuery->have_posts()): ?> 
+        
        <?php $dreamBeanQuery->the_post(); ?>
        <?php $dreamBeanQuery->the_content(); ?> 
        
@@ -86,14 +87,14 @@
          </div>
 
          </a>
-     
+      
          <?php endwhile; ?>
          <?php wp_reset_postdata(); ?> 
                    <!-- this will end the and reset and go back to normal so you can go back to normal to your page -->
          <?php endif; ?>
 
   </div>
-  
+  <div id="space-invader" style="background-color:<?php the_field('hex_colour'); ?>"></div>
       </div> <!-- /.content -->
       <div class="creditsSide showAtSize">
    <div class="creditsHeader">
@@ -115,7 +116,6 @@
      </div>
   </div>
       </div>
-  
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 

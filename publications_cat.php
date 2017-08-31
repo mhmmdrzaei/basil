@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <div class="main">
-<div id="space-invader"></div>
   <div class="container">
    <div class="cContainer"> 
    <div class="sidebarProjects">
@@ -44,8 +43,8 @@
         </div>
    </div>
      <div class="sidebarblog">
-       <h2 style="margin-bottom: 0">Projects:</h2>
-       <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
+       <h2 style="margin-bottom: 0">Publications:</h2>
+       <?php  dynamic_sidebar( 'publications-widget-area' ); ?>
            <?php $the_query = new WP_Query( 'page_id=13' ); ?>
       
            <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
@@ -55,11 +54,11 @@
        
      </div>
 </div>
-   	  <div class="projectsMain">
-   	  	<?php get_template_part( 'loop', 'tag' ); ?>
+      <div class="projectsMain">
+        <?php get_template_part( 'loop', 'publications_cat' ); ?>
 
-   	
-   	</div> <!-- /.content -->
+    
+    </div> <!-- /.content -->
              <div class="creditsSide showAtSize">
           <div class="creditsHeader">
                  <?php $the_query = new WP_Query( 'page_id=13' ); ?>

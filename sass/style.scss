@@ -53,7 +53,7 @@ body {
 }
 .content {
 	// width: 930px;
-	// width: 95%;
+	width: 100%;
 	// margin: 0 auto;
 	min-height: 650px;
 	margin-bottom: 30px;
@@ -408,7 +408,7 @@ ul.wp-tag-cloud{
 	width: 70%;
 	    margin: 0 auto 200px;
 	    position: relative;
-	    left: 185px;
+	    left: 130px;
 	    // left: 10%;
 	    top: 10%;
 }
@@ -419,7 +419,7 @@ ul.wp-tag-cloud{
     // left: -66px;
 }
 .projectsMain{
-	width: 80%;
+	width: 85%;
 	top: 250px;
 	// margin-top: 10px;
 	a.redProject {
@@ -429,10 +429,19 @@ ul.wp-tag-cloud{
 				box-shadow: -12px 11px 30px -6px rgba(0,0,0,0.75);
 			}
 		}
+		.pubPostss{
+			&:hover {
+				background: green;
+				box-shadow: -12px 11px 30px -6px rgba(0,0,0,0.75);
+			}
+		}
+
 		
 	}
 	
 }
+
+
 .projectpost, .publicationspost, .servicespost {
 	// width: 30%;
 
@@ -568,6 +577,9 @@ ul.bxslider {
 	margin: 0 auto;
 }
 .newsContentMain {
+	position: relative;
+	top: 250px;
+	font-family: $headfont;
 
 }
 .newsBody {

@@ -298,7 +298,7 @@ function pre_r($obj) {
 function is_blog () {
 	global  $post;
 	$posttype = get_post_type($post );
-	return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
+	return ( ((is_archive()) || (is_author())|| (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
 }
 
 /* get_post_parent() - Returns the current posts parent, if current post if top level, returns itself */
