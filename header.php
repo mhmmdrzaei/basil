@@ -57,7 +57,10 @@
         'container' => false,
         'theme_location' => 'primary'
       )); ?>
-        
+        <div class="extraMenu">
+          <a href="<?php the_permalink(13); ?>">Projects, Services & Collaborations </a>
+          <a href="#" class="shopMenu">BLZ BLZ Shop</a>
+        </div>
       </div>
    </div>
 </div>
