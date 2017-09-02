@@ -1362,7 +1362,33 @@ transform: translateX(-100%);
 	.wp-tag-cloud {
 		padding: 5px;
 	}
+	.wp-tag-cloud{
+		display: flex;
+	flex-flow: row wrap;
+		width: 200px;
+	
+		li{
+			padding: 5px;
+		}
+	}
+	.sidebarblog {
+ 
+    top: 14px;
+    left: 185px;
+	}
 }
+@media(max-width: 500px){
+
+	h1 {
+		@include fontSize(25);
+	}
+	.fuckyouforever{
+		img {
+			width: 45px;
+		}
+	}
+}
+
 
 
 
