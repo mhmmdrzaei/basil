@@ -96,25 +96,7 @@
   </div>
   <div id="space-invader" style="background-color:<?php the_field('hex_colour'); ?>"></div>
       </div> <!-- /.content -->
-      <div class="creditsSide showAtSize">
-   <div class="creditsHeader">
-          <?php $the_query = new WP_Query( 'page_id=13' ); ?>
-     
-          <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
-     
-      <div class="creditsToggled">
-      <div class="creditsContent away">
-      <span class="close thick"></span>
-        <?php the_content(); ?>
-          
-        </div> 
-      <a href="<?php the_permalink(13); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/projectetchorizontal.png" alt=""> </a>
-      </div>      
-  
-     
-      <?php endwhile;?>
-     </div>
-  </div>
+
       </div>
   </div> <!-- /.container -->
 </div> <!-- /.main -->

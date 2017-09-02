@@ -2,7 +2,7 @@
 
 <div class="main homeMain">
   <div class="container">
-<div class="cContainer frontMinHeight">
+<div class="cContainerFront frontMinHeight">
       <div class="creditsSide hideAtSize frontPageOnly">
          <div class="creditsHeader">
                 <?php $the_query = new WP_Query( 'page_id=13' ); ?>
