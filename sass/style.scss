@@ -597,12 +597,13 @@ ul.bxslider {
 .loader{
 
   height: 70px;
-  width: 35%;
+  width: 30%;
   text-align: center;
   display: inline-block;
   vertical-align: top;
   position: relative;
-  left: 81px;
+  left: 88px;
+
 }
 
 /*
@@ -1395,6 +1396,12 @@ transform: translateX(-100%);
 	}
 	#menu-header-menu {
 		top: 255px;
+	}
+	.loader {
+		display: none;
+	}
+	.newsTitle h4 {
+		@include fontSize(22);
 	}
 
 	

@@ -8,14 +8,14 @@
  <div class="cContainer"> 
  <div class="sidebarProjects">
  <div class="containerCube cubeProjects">
-   <div class="axis">
+  <a href="https://www.mijnwebwinkel.nl/webwinkel-gesloten"> <div class="axis">
      <div class="front">BZL BZL</div>
      <div class="back">BZL BZL</div>
      <div class="left">BZL BZL</div>
      <div class="right">BZL BZL</div>
      <div class="top"></div> 
      <div class="bottom"></div>
-   </div>
+   </div></a>
  </div>
  <div class="creditsSide hideAtSize frontPageOnly">
     <div class="creditsHeader">

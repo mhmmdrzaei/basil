@@ -4,24 +4,7 @@
 <div class="main">
 <div id="space-invader"></div>
   <div class="container"><div class="cContainer">
-<!-- <div class="creditsSide hideAtSize">
-   <div class="creditsHeader">
-          <?php $the_query = new WP_Query( 'page_id=13' ); ?>
-     
-          <?php while ($the_query -> have_posts()) : $the_query -> the_post();  ?>
-     
-      <div class="creditsToggle">
-      <?php the_post_thumbnail( 'medium' ) ?>  
-      </div>      
-      <div class="creditsContent away">
-      <span class="close thick"></span>
-        <?php the_content(); ?>
-          
-        </div>   
-     
-      <?php endwhile;?>
-     </div>
-  </div> -->
+
   
   	  <div class="content newsContentMain">
       <div class="newsTitle">
@@ -81,15 +64,15 @@
         <?php endwhile;?>
        </div> 
   </div>
-  <div class="containerCube cubeNews">
-    <div class="axis">
-      <div class="front">BZL BZL</div>
-      <div class="back">BZL BZL</div>
-      <div class="left">BZL BZL</div>
-      <div class="right">BZL BZL</div>
-      <div class="top"></div> 
-      <div class="bottom"></div>
-    </div>
+  <a href="https://www.mijnwebwinkel.nl/webwinkel-gesloten"><div class="containerCube cubeNews">
+      <div class="axis">
+        <div class="front">BZL BZL</div>
+        <div class="back">BZL BZL</div>
+        <div class="left">BZL BZL</div>
+        <div class="right">BZL BZL</div>
+        <div class="top"></div> 
+        <div class="bottom"></div>
+      </div></a>
   </div>
 </div>
 
