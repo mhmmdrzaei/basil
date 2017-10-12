@@ -76,9 +76,9 @@
                <!-- this will end the and reset and go back to normal so you can go back to normal to your page -->
      <?php endif; ?>
      <div class="yearComplete">
-          <?php if( have_rows('image_slider_projects') ) : ?>
+          <?php if( have_rows('image_slider_projects_') ) : ?>
                                <ul class="bxslider">
-                                   <?php while( have_rows('image_slider_projects') ) : the_row(); ?>
+                                   <?php while( have_rows('image_slider_projects_') ) : the_row(); ?>
                                        <li>
                                            <?php $image = get_sub_field('images_projects');
                                                if( !empty($image) ): ?>
@@ -129,14 +129,14 @@
               
    
               <!-- video -->
-               <?php while( has_sub_fields('video_projects') ): ?>
+               <?php while( has_sub_fields('video_projects_video') ): ?>
                <div class="Vimeo">
                  
-                   <?php the_sub_field('video_styling'); ?>
+                   <?php the_sub_field('video_styling_video'); ?>
                    <div class="embed-container">
-                     <?php the_sub_field('embedded_link'); ?>
+                     <?php the_sub_field('embedded_link_video'); ?>
                    </div>
-                   <p class="artistCaption"><?php the_sub_field('video_credits'); ?></p>
+                   <p class="artistCaption"><?php the_sub_field('video_credits_video'); ?></p>
                    
    
                </div>
