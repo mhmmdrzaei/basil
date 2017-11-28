@@ -406,6 +406,7 @@ ul.wp-tag-cloud{
 }
 .yearComplete {
 	width: 70%;
+	max-width: 700px;
 	    margin: 0 auto 200px;
 	    position: relative;
 	    left: 130px;
@@ -503,9 +504,12 @@ ul.wp-tag-cloud{
 	
 .bx-caption{
 	bottom: 15px;
-	background: #2723C2;
+	background:none;
 	word-spacing: 3px;
 	font-weight: 400;
+	width: 100%;
+	margin: 0 auto;
+	text-shadow: 1px 1px 1px #000
 }
 	
 	/*fix other elements on the page moving (on Chrome)*/
@@ -516,8 +520,7 @@ ul.wp-tag-cloud{
     	transform: translatez(0);
 }
 .bx-wrapper {
-	max-width: 100% !important;
-
+	margin: 60px 0 !important;
 }
 .bx-wrapper .bx-prev {
 	left: -20px;
@@ -527,6 +530,23 @@ ul.wp-tag-cloud{
 .bx-wrapper .bx-next {
 	right: -20px;
 	z-index: 99 !important;
+}
+ul.bxslider li img {
+height: initial !important;
+width: initial !important;
+max-height: 700px !important;
+
+}
+div.paragraph {
+max-width: 220px;
+}
+
+
+
+.bx-caption {
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
 }
 ul.bxslider {
 		a {

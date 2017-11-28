@@ -46,7 +46,7 @@
       </div>
  </div>
  <div class="sidebarblog singleSide">
-   <h2 style="margin-bottom: 0">Projects:</h2>
+   <h2 style="margin-bottom: 0"><a href="/projects">Projects:</a></h2>
    <?php  dynamic_sidebar( 'projects-widget-area' ); ?>
        <?php $the_query = new WP_Query( 'page_id=13' ); ?>
   

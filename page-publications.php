@@ -45,7 +45,7 @@
        </div>
   </div>
     <div class="sidebarblog">
-      <h2 style="margin-bottom: 0">Publications:</h2>
+      <h2 style="margin-bottom: 0"><a href="/publications">Publications:</a></h2>
       <?php the_category( 'publications-widget-area' ); ?> 
       <?php  dynamic_sidebar( 'publications-widget-area' ); ?>
           <?php $the_query = new WP_Query( 'page_id=13' ); ?>
