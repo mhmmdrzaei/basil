@@ -80,6 +80,7 @@ footer{
 
 
 $headfont: 'Nunito', sans-serif;
+$headerfont:'Permanent Marker', cursive;
 $bodyfont:'Nunito', sans-serif;
 
 @mixin fontSize($sizeValue){
@@ -93,13 +94,13 @@ $bodyfont:'Nunito', sans-serif;
 // P's & H's
 
 h1{
-	@include fontSize(40);
-	font-family: $headfont;
+	@include fontSize(24);
+	font-family: $headerfont;
 	text-transform: uppercase;
 	font-weight: 400;
 	a {
 		color: #848484;
-		font-family: $headfont;
+		font-family: $headerfont;
 
 	}
 
@@ -127,7 +128,6 @@ h3 {
 }
 .headerFont {
 	    margin-top: 25px;
-	    width: 50px;
 	    position: fixed;
 	        left: 20px;
 	    z-index: 99;
@@ -210,10 +210,10 @@ ul.menu {
 }
 #menu {
   position: fixed;
-  width: 300px;
+  width: 320px;
   height: 100%;
   top: 0;
-  left: -300px;
+  left: -320px;
   z-index: 1000;
   background-color: #2723C2;
   overflow: auto;
@@ -241,7 +241,7 @@ ul.menu {
   text-transform: uppercase;
   color: #fff;
   font-weight: 300;
-  font-size: 2.4em;
+  @include fontSize(22);
 }
 #menu.menu-open {
 	left: 0px;
@@ -253,7 +253,7 @@ ul.menu {
   color: #2723C2;
   border: none;
   position: fixed;
-  top: 185px;
+  top: 63px;
   left:-3px;
   padding: 30px;
   background-color: transparent;
@@ -753,7 +753,7 @@ h4.entry-title {
 .itemLinkeachFront, .serviceItemLink {
 
 	img {
-		width: 85px;
+		width: 97px;
 		max-width: none;
 		z-index: -1;
 		// height: 100%
@@ -1409,10 +1409,10 @@ transform: translateX(-100%);
 
 @media(max-width: 640px){
 	h1 {
-		@include fontSize(30);
+		@include fontSize(28);
 	}
 	.menu-btn {
-		top:130px;
+		// top:130px;
 	}
 	#menu-header-menu {
 		top: 255px;

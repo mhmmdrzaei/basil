@@ -29,7 +29,7 @@
             <path d="M0, 200a200, 200 0 1, 0 400, 0a200, 200 0 1, 0 -400, 0" id="txt-path"></path>
           </defs>
 
-          <text fill="#848484" font-size="51" font-weight="400" letter-spacing="2px">
+          <text fill="#000" font-size="51" font-weight="700" letter-spacing="2px">
             <!-- This is the magic -->
             <textPath startOffset="0" xlink:href="#txt-path">PROJECTS, COLLABORATIONS AND SERVICES</textPath>
           </text>
