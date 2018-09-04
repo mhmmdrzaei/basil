@@ -80,7 +80,7 @@ footer{
 
 
 $headfont: 'Nunito', sans-serif;
-$headerfont:'Permanent Marker', cursive;
+$headerfont:'Baloo Da', cursive;
 $bodyfont:'Nunito', sans-serif;
 
 @mixin fontSize($sizeValue){
@@ -94,12 +94,11 @@ $bodyfont:'Nunito', sans-serif;
 // P's & H's
 
 h1{
-	@include fontSize(24);
+	@include fontSize(28);
 	font-family: $headerfont;
-	text-transform: uppercase;
 	font-weight: 400;
 	a {
-		color: #848484;
+		color: black;
 		font-family: $headerfont;
 
 	}
@@ -1288,9 +1287,9 @@ color:#2723C2;
 -webkit-transform:translateX(100%); 
 transform:translateX(100%);
 /* Apply animation to this element */ 
--moz-animation: scroll-left 100s linear infinite;
--webkit-animation: scroll-left 100s linear infinite;
-animation: scroll-left 100s linear infinite;
+-moz-animation: scroll-left 200s linear infinite;
+-webkit-animation: scroll-left 200s linear infinite;
+animation: scroll-left 200s linear infinite;
 }
 /* Move it (define the animation) */
 @-moz-keyframes scroll-left {
